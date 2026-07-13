@@ -14,21 +14,22 @@ body { margin: 0; background: #050506; }
 ::selection { background: rgba(167,139,250,.35); }
 a { color: #C4B0FA; }
 </style>
+<link rel="stylesheet" href="assets/mobile.css">
 </head>
 <body>
 <script src="assets/geo.js?v=2"></script>
 <div style="font-family: Manrope, sans-serif; background-color: #050506; background-image: radial-gradient(900px 600px at 85% 12%, rgba(124,92,252,.07), transparent 60%), radial-gradient(800px 550px at 8% 55%, rgba(167,139,250,.05), transparent 60%), radial-gradient(1000px 650px at 90% 92%, rgba(124,92,252,.06), transparent 60%), url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cg fill='%23C4B0FA'%3E%3Ccircle cx='18' cy='32' r='1' opacity='.16'/%3E%3Ccircle cx='84' cy='9' r='.8' opacity='.12'/%3E%3Ccircle cx='150' cy='51' r='1' opacity='.14'/%3E%3Ccircle cx='203' cy='96' r='.8' opacity='.1'/%3E%3Ccircle cx='55' cy='118' r='1' opacity='.15'/%3E%3Ccircle cx='121' cy='160' r='.8' opacity='.11'/%3E%3Ccircle cx='180' cy='196' r='1' opacity='.13'/%3E%3Ccircle cx='30' cy='201' r='.8' opacity='.1'/%3E%3Ccircle cx='108' cy='78' r='.7' opacity='.09'/%3E%3C/g%3E%3C/svg%3E&quot;); background-attachment: fixed; color: #F2F0F7; min-height: 100vh;">
 
   <!-- NAV -->
-  <div style="position: fixed; top: 0; left: 0; right: 0; z-index: 90; display: flex; align-items: center; justify-content: space-between; padding: 12px 36px; background: rgba(5,5,6,.88); border-bottom: 1px solid rgba(167,139,250,.12);">
+  <div class="bsw-nav" style="position: fixed; top: 0; left: 0; right: 0; z-index: 90; display: flex; align-items: center; justify-content: space-between; padding: 12px 36px; background: rgba(5,5,6,.88); border-bottom: 1px solid rgba(167,139,250,.12);">
     <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
       <img src="assets/logo-full.png" alt="Bloom Space Web" style="height: 34px;">
     </a>
-    <div style="display: flex; align-items: center; gap: 32px;">
-      <a href="index.html" data-en="Home" style="color: #F2F0F7; text-decoration: none; font-size: 14px; font-weight: 700;">Главная</a>
-      <a href="uslugi.html" data-en="Services" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600;" style-hover="color: #F2F0F7;">Услуги</a>
-      <a href="ceny.html" data-en="Pricing" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600;" style-hover="color: #F2F0F7;">Цены</a>
-      <a href="#form" data-en="Get a quote" style="color: #0B0714; text-decoration: none; font-size: 13px; font-weight: 800; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); padding: 10px 22px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Оставить заявку</a>
+    <div class="bsw-nav-links" style="display: flex; align-items: center; gap: 32px;">
+      <a href="index.html" data-en="Home" class="bsw-nav-home" style="color: #F2F0F7; text-decoration: none; font-size: 14px; font-weight: 700;">Главная</a>
+      <a href="uslugi.html" data-en="Services" class="bsw-nav-link" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600;" style-hover="color: #F2F0F7;">Услуги</a>
+      <a href="ceny.html" data-en="Pricing" class="bsw-nav-link" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600;" style-hover="color: #F2F0F7;">Цены</a>
+      <a href="#form" data-en="Get a quote" class="bsw-nav-cta" style="color: #0B0714; text-decoration: none; font-size: 13px; font-weight: 800; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); padding: 10px 22px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Оставить заявку</a>
     </div>
   </div>
 
@@ -38,7 +39,7 @@ a { color: #C4B0FA; }
       <source src="assets/hero-full.webm" type="video/webm">
       <source src="assets/hero-full.mp4" type="video/mp4">
     </video>
-    <div style="position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 150px 40px 100px; width: 100%;">
+    <div class="bsw-hero-pad" style="position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 150px 40px 100px; width: 100%;">
       <div style="display: flex; flex-direction: column; gap: 26px; max-width: 620px;">
         <div data-en="Your business&lt;br&gt;&lt;span style=&quot;background: linear-gradient(100deg, #E8E2FA 10%, #A78BFA 55%, #7C5CFC 90%); -webkit-background-clip: text; background-clip: text; color: transparent;&quot;&gt;answers itself&lt;/span&gt;" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(40px, 4.6vw, 72px); line-height: 1.06; letter-spacing: -0.01em;">
           Ваш бизнес сам<br>
@@ -47,7 +48,7 @@ a { color: #C4B0FA; }
         <div data-en="AI receptionists and websites that don't miss a single client. While competitors call back &quot;within the day&quot;, your clients are already booked." style="font-size: 18px; line-height: 1.65; color: #C7C1D6; max-width: 480px; font-weight: 500;">
           ИИ-администраторы и сайты, которые не пропускают ни одного клиента. Пока конкуренты перезванивают «в течение дня», ваши клиенты уже записаны.
         </div>
-        <div style="display: flex; gap: 14px; align-items: center;">
+        <div class="bsw-hero-buttons" style="display: flex; gap: 14px; align-items: center;">
           <a href="#form" data-en="I want this too" style="text-decoration: none; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); font-weight: 800; font-size: 15px; padding: 16px 32px; border-radius: 100px;" style-hover="filter: brightness(1.12); transform: translateY(-1px);">Хочу так же</a>
           <a href="ceny.html" data-en="See pricing" style="text-decoration: none; color: #F2F0F7; border: 1px solid rgba(167,139,250,.3); font-weight: 700; font-size: 15px; padding: 15px 30px; border-radius: 100px; background: rgba(5,5,6,.45);" style-hover="border-color: rgba(167,139,250,.7);">Смотреть цены</a>
         </div>
@@ -56,7 +57,7 @@ a { color: #C4B0FA; }
   </div>
 
   <!-- УСЛУГИ -->
-  <div style="max-width: 1240px; margin: 0 auto; padding: 110px 40px;">
+  <div class="bsw-section" style="max-width: 1240px; margin: 0 auto; padding: 110px 40px;">
     <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 48px;">
       <div>
         <div data-en="What I do" style="font-size: 13px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: #A78BFA; margin-bottom: 16px;">Чем я занимаюсь</div>
@@ -64,7 +65,7 @@ a { color: #C4B0FA; }
       </div>
       <a href="uslugi.html" data-en="More about services →" style="text-decoration: none; color: #C4B0FA; font-weight: 800; font-size: 15px; white-space: nowrap; border-bottom: 1px solid rgba(167,139,250,.4); padding-bottom: 3px;" style-hover="color: #F2F0F7;">Подробнее об услугах →</a>
     </div>
-    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+    <div class="bsw-grid-3" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
       <a href="uslugi.html#calls" style="text-decoration: none; color: inherit; background: #0C0B12; border: 1px solid rgba(167,139,250,.14); border-radius: 24px; padding: 34px 30px; display: flex; flex-direction: column; gap: 16px; transition: border-color .3s, transform .3s;" style-hover="border-color: rgba(167,139,250,.5); transform: translateY(-4px);">
         <div style="font-family: Unbounded, sans-serif; font-size: 26px; font-weight: 700; color: #A78BFA;">01</div>
         <div data-en="AI receptionist on the phone" style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 20px; line-height: 1.3;">ИИ-администратор на телефоне</div>
@@ -88,7 +89,7 @@ a { color: #C4B0FA; }
 
   <!-- ДЕМО -->
   <div id="demoSection" style="border-top: 1px solid rgba(167,139,250,.1); border-bottom: 1px solid rgba(167,139,250,.1); background: radial-gradient(800px 500px at 30% 20%, rgba(124,92,252,.08), transparent 60%);">
-    <div style="max-width: 1240px; margin: 0 auto; padding: 110px 40px;">
+    <div class="bsw-section" style="max-width: 1240px; margin: 0 auto; padding: 110px 40px;">
       <div style="text-align: center; margin-bottom: 56px;">
         <div data-en="Live demo" style="font-size: 13px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: #A78BFA; margin-bottom: 16px;">Живое демо</div>
         <div data-en="This is what your clients&lt;br&gt;actually see" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 48px); line-height: 1.15;">Вот как это выглядит<br>у ваших клиентов</div>
@@ -103,10 +104,10 @@ a { color: #C4B0FA; }
   </div>
 
   <!-- КАК ЭТО РАБОТАЕТ -->
-  <div style="max-width: 1240px; margin: 0 auto; padding: 110px 40px;">
+  <div class="bsw-section" style="max-width: 1240px; margin: 0 auto; padding: 110px 40px;">
     <div data-en="How it works" style="font-size: 13px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: #A78BFA; margin-bottom: 16px;">Как это работает</div>
     <div data-en="From request to launch —&lt;br&gt;in under a week" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 48px); line-height: 1.15; margin-bottom: 48px;">От заявки до запуска —<br>меньше недели</div>
-    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px;">
+    <div class="bsw-grid-4" style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px;">
       <div style="border-top: 2px solid rgba(167,139,250,.4); padding-top: 22px; display: flex; flex-direction: column; gap: 12px;">
         <div data-en="Step 1" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 15px; color: #A78BFA;">Шаг 1</div>
         <div data-en="Getting to know your project" style="font-weight: 800; font-size: 18px;">Знакомство с проектом</div>
@@ -132,12 +133,12 @@ a { color: #C4B0FA; }
 
   <!-- ЦЕНЫ ТИЗЕР -->
   <div style="border-top: 1px solid rgba(167,139,250,.1);">
-    <div style="max-width: 1240px; margin: 0 auto; padding: 110px 40px;">
+    <div class="bsw-section" style="max-width: 1240px; margin: 0 auto; padding: 110px 40px;">
       <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 48px;">
         <div data-en="Pricing without &quot;leave a&lt;br&gt;request to find out&quot;" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 48px); line-height: 1.15;">Цены без «оставьте<br>заявку и узнаете»</div>
         <a href="ceny.html" data-en="All plans →" style="text-decoration: none; color: #C4B0FA; font-weight: 800; font-size: 15px; white-space: nowrap; border-bottom: 1px solid rgba(167,139,250,.4); padding-bottom: 3px;" style-hover="color: #F2F0F7;">Все тарифы →</a>
       </div>
-      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+      <div class="bsw-grid-3" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 20px;">
         <div style="background: #0C0B12; border: 1px solid rgba(167,139,250,.14); border-radius: 20px; padding: 24px 22px; display: flex; flex-direction: column; gap: 6px;">
           <div data-en="AI receptionist" style="font-weight: 800; font-size: 14px; color: #9B94AD;">ИИ-администратор</div>
           <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 28px;"><span data-byn="199">199</span> <span data-cur style="font-size: 15px; color: #9B94AD;">BYN</span></div>
@@ -152,8 +153,8 @@ a { color: #C4B0FA; }
           <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 28px;"><span data-byn="449">449</span> <span data-cur style="font-size: 15px; color: #9B94AD;">BYN</span></div>
         </div>
       </div>
-      <div style="background: linear-gradient(160deg, rgba(167,139,250,.16), rgba(124,92,252,.06)); border: 1px solid rgba(167,139,250,.4); border-radius: 24px; padding: 30px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; position: relative;">
-        <div data-en="Hot deal" style="position: absolute; top: -12px; left: 32px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); padding: 6px 14px; border-radius: 100px;">Горячее предложение</div>
+      <div class="bsw-hotdeal" style="background: linear-gradient(160deg, rgba(167,139,250,.16), rgba(124,92,252,.06)); border: 1px solid rgba(167,139,250,.4); border-radius: 24px; padding: 30px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; position: relative;">
+        <div class="bsw-hotdeal-badge" data-en="Hot deal" style="position: absolute; top: -12px; left: 32px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); padding: 6px 14px; border-radius: 100px;">Горячее предложение</div>
         <div>
           <div data-en="Landing page + AI receptionist" style="font-weight: 800; font-size: 16px; color: #C4B0FA; margin-bottom: 6px;">Лендинг + ИИ-администратор</div>
           <div data-en="The site sells — the AI closes the booking" style="font-size: 14px; color: #9B94AD; font-weight: 600;">Сайт продаёт — ИИ дожимает до записи</div>
@@ -168,7 +169,7 @@ a { color: #C4B0FA; }
 
   <!-- О СЕБЕ -->
   <div style="border-top: 1px solid rgba(167,139,250,.1);">
-    <div style="max-width: 900px; margin: 0 auto; padding: 110px 40px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 26px;">
+    <div class="bsw-section" style="max-width: 900px; margin: 0 auto; padding: 110px 40px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 26px;">
       <img src="assets/logo-mark.png" alt="Bloom Space Web" style="width: 96px; animation: bswFloat 4s ease-in-out infinite;">
       <div data-en="Not an agency. One person&lt;br&gt;who's accountable for the result" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(26px, 2.8vw, 40px); line-height: 1.2;">Не агентство. Один человек,<br>который отвечает за результат</div>
       <div data-en="Bloom Space Web is me. You message me directly, I build your project myself and support it myself. No managers, no &quot;I'll pass it to the developer&quot;, no week-long approvals. That's why launch takes days, not months — priced like a freelancer, works like a studio." style="font-size: 17px; line-height: 1.75; color: #9B94AD; font-weight: 500; max-width: 640px;">Bloom Space Web — это я. Вы пишете мне напрямую, я сам собираю ваш проект и сам его поддерживаю. Никаких менеджеров, «передам разработчику» и недельных согласований. Поэтому запуск занимает дни, а не месяцы — и стоит как у фрилансера, а работает как у студии.</div>
@@ -177,14 +178,14 @@ a { color: #C4B0FA; }
 
   <!-- ФОРМА -->
   <div id="form" style="border-top: 1px solid rgba(167,139,250,.1); background: radial-gradient(800px 500px at 70% 30%, rgba(124,92,252,.1), transparent 60%);">
-    <div style="max-width: 1240px; margin: 0 auto; padding: 110px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+    <div class="bsw-section bsw-grid-2" style="max-width: 1240px; margin: 0 auto; padding: 110px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
       <div style="display: flex; flex-direction: column; gap: 22px;">
         <div data-en="How many clients have you lost while reading this page?" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 50px); line-height: 1.12;">Сколько клиентов вы потеряли, пока читали эту страницу?</div>
         <div data-en="Leave a request — in 15 minutes we'll go through your situation, and I'll tell you honestly what you need and what you don't. No hard sell." style="font-size: 17px; line-height: 1.7; color: #9B94AD; font-weight: 500;">Оставьте заявку — за 15 минут разберём вашу ситуацию, и я скажу честно, что вам нужно, а что нет. Без впаривания.</div>
       </div>
       <div id="formCard" style="background: #0C0B12; border: 1px solid rgba(167,139,250,.2); border-radius: 26px; padding: 40px; display: flex; flex-direction: column; gap: 18px;">
         <input id="fName" maxlength="80" placeholder="Как вас зовут" data-en-placeholder="Your name" style="background: #13111B; border: 1px solid rgba(167,139,250,.16); border-radius: 14px; padding: 16px 18px; font-size: 15px; color: #F2F0F7; font-family: Manrope, sans-serif; font-weight: 600; outline: none;" style-focus="border-color: rgba(167,139,250,.6);">
-        <div style="display: grid; grid-template-columns: 150px 1fr; gap: 10px;">
+        <div class="bsw-contact-row" style="display: grid; grid-template-columns: 150px 1fr; gap: 10px;">
           <select id="fWay" style="cursor: pointer; background-color: #13111B; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%23C4B0FA' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E&quot;); background-repeat: no-repeat; background-position: right 14px center; border: 1px solid rgba(167,139,250,.16); border-radius: 14px; padding: 16px 34px 16px 14px; font-size: 15px; color: #F2F0F7; font-family: Manrope, sans-serif; font-weight: 600; outline: none; appearance: none;">
             <option value="Telegram">Telegram</option>
             <option value="Instagram">Instagram</option>
@@ -215,10 +216,10 @@ a { color: #C4B0FA; }
 
   <!-- FOOTER -->
   <div style="border-top: 1px solid rgba(167,139,250,.1);">
-    <div style="max-width: 1240px; margin: 0 auto; padding: 40px; display: flex; flex-direction: column; gap: 28px;">
-      <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+    <div class="bsw-footer-pad" style="max-width: 1240px; margin: 0 auto; padding: 40px; display: flex; flex-direction: column; gap: 28px;">
+      <div class="bsw-footer-row" style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
         <img src="assets/logo-full.png" alt="Bloom Space Web" style="height: 28px;">
-        <div style="display: flex; gap: 28px;">
+        <div class="bsw-footer-links" style="display: flex; gap: 28px;">
           <a href="uslugi.html" data-en="Services" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Услуги</a>
           <a href="ceny.html" data-en="Pricing" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Цены</a>
           <a href="#form" data-en="Request" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Заявка</a>
@@ -233,7 +234,7 @@ a { color: #C4B0FA; }
           </a>
         </div>
       </div>
-      <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; border-top: 1px solid rgba(167,139,250,.08); padding-top: 22px;">
+      <div class="bsw-footer-row" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; border-top: 1px solid rgba(167,139,250,.08); padding-top: 22px;">
         <div style="font-size: 13px; color: #6E6880; font-weight: 600;">© 2026 Bloom Space Web</div>
         <div style="font-size: 12.5px; color: #6E6880; font-weight: 500;">bloomspaceweb555@gmail.com</div>
       </div>
