@@ -37,6 +37,18 @@
     });
   }
 
+  function localizeDemoPrices(currency, rates) {
+    document.querySelectorAll('[data-usd]').forEach(function (el) {
+      if (currency === 'USD') return;
+      if (!rates || !rates[currency] || !rates['USD']) return;
+      var local = parseFloat(el.getAttribute('data-usd')) * (rates[currency] / rates['USD']);
+      var val = local >= 100 ? Math.round(local / 10) * 10 : Math.round(local);
+      if (!isFinite(val) || val <= 0) return;
+      var num = val.toLocaleString('en-US');
+      el.textContent = currency === 'RUB' ? num + ' ₽' : num + ' ' + currency;
+    });
+  }
+
   function applyEnglish() {
     document.documentElement.setAttribute('lang', 'en');
     document.querySelectorAll('[data-en]').forEach(function (el) {
@@ -65,7 +77,7 @@
     if (!countryCode || countryCode === 'BY') return;
     var currency = CIS[countryCode] || 'USD';
     if (!CIS[countryCode]) applyEnglish();
-    withRates(function (rates) { applyPrices(currency, rates); });
+    withRates(function (rates) { applyPrices(currency, rates); localizeDemoPrices(currency, rates); });
   }
 
   var cachedCountry = sessionStorage.getItem('bswCountry');
