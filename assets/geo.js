@@ -73,11 +73,21 @@
       .catch(function () {});
   }
 
+  function ready(fn) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', fn);
+    } else {
+      fn();
+    }
+  }
+
   function run(countryCode) {
     if (!countryCode || countryCode === 'BY') return;
     var currency = CIS[countryCode] || 'USD';
-    if (!CIS[countryCode]) applyEnglish();
-    withRates(function (rates) { applyPrices(currency, rates); localizeDemoPrices(currency, rates); });
+    ready(function () {
+      if (!CIS[countryCode]) applyEnglish();
+      withRates(function (rates) { applyPrices(currency, rates); localizeDemoPrices(currency, rates); });
+    });
   }
 
   var cachedCountry = sessionStorage.getItem('bswCountry');
