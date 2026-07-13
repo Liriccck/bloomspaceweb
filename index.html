@@ -2,13 +2,14 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Bloom Space Web — ИИ-администраторы и сайты</title>
 <meta name="description" content="ИИ-администраторы, которые отвечают на звонки и сообщения 24/7, и сайты, которые приводят заявки. Bloom Space Web.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <style>
 html { scroll-behavior: smooth; }
+html, body { overflow-x: hidden; max-width: 100%; }
 body { margin: 0; background: #050506; }
 @keyframes bswFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 ::selection { background: rgba(167,139,250,.35); }
@@ -58,7 +59,7 @@ a { color: #C4B0FA; }
 
   <!-- УСЛУГИ -->
   <div class="bsw-section" style="max-width: 1240px; margin: 0 auto; padding: 110px 40px;">
-    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 48px;">
+    <div class="bsw-section-head" style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 48px;">
       <div>
         <div data-en="What I do" style="font-size: 13px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: #A78BFA; margin-bottom: 16px;">Чем я занимаюсь</div>
         <div data-en="Three tools that&lt;br&gt;work instead of you" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 48px); line-height: 1.15;">Три инструмента, которые<br>работают вместо вас</div>
@@ -134,7 +135,7 @@ a { color: #C4B0FA; }
   <!-- ЦЕНЫ ТИЗЕР -->
   <div style="border-top: 1px solid rgba(167,139,250,.1);">
     <div class="bsw-section" style="max-width: 1240px; margin: 0 auto; padding: 110px 40px;">
-      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 48px;">
+      <div class="bsw-section-head" style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 48px;">
         <div data-en="Pricing without &quot;leave a&lt;br&gt;request to find out&quot;" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 48px); line-height: 1.15;">Цены без «оставьте<br>заявку и узнаете»</div>
         <a href="ceny.html" data-en="All plans →" style="text-decoration: none; color: #C4B0FA; font-weight: 800; font-size: 15px; white-space: nowrap; border-bottom: 1px solid rgba(167,139,250,.4); padding-bottom: 3px;" style-hover="color: #F2F0F7;">Все тарифы →</a>
       </div>

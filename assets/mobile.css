@@ -31,4 +31,7 @@
 
   .bsw-hotdeal { padding: 26px 22px !important; }
   .bsw-hotdeal-badge { top: -10px !important; left: 20px !important; }
+
+  .bsw-section-head { flex-wrap: wrap !important; }
+  .bsw-section-head a { white-space: normal !important; }
 }
