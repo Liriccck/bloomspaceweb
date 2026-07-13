@@ -319,7 +319,7 @@ document.getElementById('fSubmit').addEventListener('click', function(){
     method: 'POST',
     mode: 'no-cors',
     headers: { 'Content-Type': 'text/plain' },
-    body: JSON.stringify({ name: name, contact: fWay.value + ': ' + contact, need: document.getElementById('fNeed').value })
+    body: JSON.stringify({ name: name, contact: fWay.value + ': ' + contact, need: document.getElementById('fNeed').value, lang: document.documentElement.lang === 'en' ? 'ENG' : 'RU' })
   }).catch(function(){});
   document.getElementById('formCard').style.display = 'none';
   var sc = document.getElementById('sentCard');
