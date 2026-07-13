@@ -59,14 +59,32 @@
     });
   }
 
+  // localStorage (not sessionStorage) so the detected country/rates survive
+  // navigating between pages reliably, with a TTL so they don't go stale.
+  var CACHE_TTL_MS = 24 * 60 * 60 * 1000;
+
+  function cacheGet(key) {
+    try {
+      var raw = localStorage.getItem(key);
+      if (!raw) return null;
+      var entry = JSON.parse(raw);
+      if (!entry || Date.now() - entry.t > CACHE_TTL_MS) return null;
+      return entry.v;
+    } catch (e) { return null; }
+  }
+
+  function cacheSet(key, value) {
+    try { localStorage.setItem(key, JSON.stringify({ v: value, t: Date.now() })); } catch (e) {}
+  }
+
   function withRates(cb) {
-    var cached = sessionStorage.getItem('bswRates');
-    if (cached) { cb(JSON.parse(cached)); return; }
+    var cached = cacheGet('bswRates');
+    if (cached) { cb(cached); return; }
     fetch('https://open.er-api.com/v6/latest/BYN')
       .then(function (r) { return r.json(); })
       .then(function (data) {
         if (data && data.rates) {
-          sessionStorage.setItem('bswRates', JSON.stringify(data.rates));
+          cacheSet('bswRates', data.rates);
           cb(data.rates);
         }
       })
@@ -90,14 +108,14 @@
     });
   }
 
-  var cachedCountry = sessionStorage.getItem('bswCountry');
+  var cachedCountry = cacheGet('bswCountry');
   if (cachedCountry) { run(cachedCountry); return; }
 
   fetch('https://ipwho.is/')
     .then(function (r) { return r.json(); })
     .then(function (data) {
       var cc = (data && data.country_code) || '';
-      sessionStorage.setItem('bswCountry', cc);
+      cacheSet('bswCountry', cc);
       run(cc);
     })
     .catch(function () {});
