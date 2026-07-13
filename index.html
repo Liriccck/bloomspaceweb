@@ -16,7 +16,7 @@ a { color: #C4B0FA; }
 </style>
 </head>
 <body>
-
+<script src="assets/geo.js"></script>
 <div style="font-family: Manrope, sans-serif; background-color: #050506; background-image: radial-gradient(900px 600px at 85% 12%, rgba(124,92,252,.07), transparent 60%), radial-gradient(800px 550px at 8% 55%, rgba(167,139,250,.05), transparent 60%), radial-gradient(1000px 650px at 90% 92%, rgba(124,92,252,.06), transparent 60%), url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cg fill='%23C4B0FA'%3E%3Ccircle cx='18' cy='32' r='1' opacity='.16'/%3E%3Ccircle cx='84' cy='9' r='.8' opacity='.12'/%3E%3Ccircle cx='150' cy='51' r='1' opacity='.14'/%3E%3Ccircle cx='203' cy='96' r='.8' opacity='.1'/%3E%3Ccircle cx='55' cy='118' r='1' opacity='.15'/%3E%3Ccircle cx='121' cy='160' r='.8' opacity='.11'/%3E%3Ccircle cx='180' cy='196' r='1' opacity='.13'/%3E%3Ccircle cx='30' cy='201' r='.8' opacity='.1'/%3E%3Ccircle cx='108' cy='78' r='.7' opacity='.09'/%3E%3C/g%3E%3C/svg%3E&quot;); background-attachment: fixed; color: #F2F0F7; min-height: 100vh;">
 
   <!-- NAV -->
@@ -25,10 +25,10 @@ a { color: #C4B0FA; }
       <img src="assets/logo-full.png" alt="Bloom Space Web" style="height: 34px;">
     </a>
     <div style="display: flex; align-items: center; gap: 32px;">
-      <a href="index.html" style="color: #F2F0F7; text-decoration: none; font-size: 14px; font-weight: 700;">Главная</a>
-      <a href="uslugi.html" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600;" style-hover="color: #F2F0F7;">Услуги</a>
-      <a href="ceny.html" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600;" style-hover="color: #F2F0F7;">Цены</a>
-      <a href="#form" style="color: #0B0714; text-decoration: none; font-size: 13px; font-weight: 800; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); padding: 10px 22px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Оставить заявку</a>
+      <a href="index.html" data-en="Home" style="color: #F2F0F7; text-decoration: none; font-size: 14px; font-weight: 700;">Главная</a>
+      <a href="uslugi.html" data-en="Services" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600;" style-hover="color: #F2F0F7;">Услуги</a>
+      <a href="ceny.html" data-en="Pricing" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600;" style-hover="color: #F2F0F7;">Цены</a>
+      <a href="#form" data-en="Get a quote" style="color: #0B0714; text-decoration: none; font-size: 13px; font-weight: 800; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); padding: 10px 22px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Оставить заявку</a>
     </div>
   </div>
 
@@ -37,16 +37,16 @@ a { color: #C4B0FA; }
     <video id="heroVideo" muted playsinline autoplay loop preload="auto" src="assets/hero-full.webm" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; transform: translateZ(0);"></video>
     <div style="position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 150px 40px 100px; width: 100%;">
       <div style="display: flex; flex-direction: column; gap: 26px; max-width: 620px;">
-        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(40px, 4.6vw, 72px); line-height: 1.06; letter-spacing: -0.01em;">
+        <div data-en="Your business now&lt;br&gt;&lt;span style=&quot;background: linear-gradient(100deg, #E8E2FA 10%, #A78BFA 55%, #7C5CFC 90%); -webkit-background-clip: text; background-clip: text; color: transparent;&quot;&gt;answers itself&lt;/span&gt;" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(40px, 4.6vw, 72px); line-height: 1.06; letter-spacing: -0.01em;">
           Ваш бизнес сам<br>
           <span style="background: linear-gradient(100deg, #E8E2FA 10%, #A78BFA 55%, #7C5CFC 90%); -webkit-background-clip: text; background-clip: text; color: transparent;">берёт трубку</span>
         </div>
-        <div style="font-size: 18px; line-height: 1.65; color: #C7C1D6; max-width: 480px; font-weight: 500;">
+        <div data-en="AI receptionists and websites that don't miss a single client. While competitors call back &quot;within the day&quot;, your clients are already booked." style="font-size: 18px; line-height: 1.65; color: #C7C1D6; max-width: 480px; font-weight: 500;">
           ИИ-администраторы и сайты, которые не пропускают ни одного клиента. Пока конкуренты перезванивают «в течение дня», ваши клиенты уже записаны.
         </div>
         <div style="display: flex; gap: 14px; align-items: center;">
-          <a href="#form" style="text-decoration: none; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); font-weight: 800; font-size: 15px; padding: 16px 32px; border-radius: 100px;" style-hover="filter: brightness(1.12); transform: translateY(-1px);">Хочу так же</a>
-          <a href="ceny.html" style="text-decoration: none; color: #F2F0F7; border: 1px solid rgba(167,139,250,.3); font-weight: 700; font-size: 15px; padding: 15px 30px; border-radius: 100px; background: rgba(5,5,6,.45);" style-hover="border-color: rgba(167,139,250,.7);">Смотреть цены</a>
+          <a href="#form" data-en="I want this too" style="text-decoration: none; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); font-weight: 800; font-size: 15px; padding: 16px 32px; border-radius: 100px;" style-hover="filter: brightness(1.12); transform: translateY(-1px);">Хочу так же</a>
+          <a href="ceny.html" data-en="See pricing" style="text-decoration: none; color: #F2F0F7; border: 1px solid rgba(167,139,250,.3); font-weight: 700; font-size: 15px; padding: 15px 30px; border-radius: 100px; background: rgba(5,5,6,.45);" style-hover="border-color: rgba(167,139,250,.7);">Смотреть цены</a>
         </div>
       </div>
     </div>
@@ -56,29 +56,29 @@ a { color: #C4B0FA; }
   <div style="max-width: 1240px; margin: 0 auto; padding: 110px 40px;">
     <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 48px;">
       <div>
-        <div style="font-size: 13px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: #A78BFA; margin-bottom: 16px;">Чем я занимаюсь</div>
-        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 48px); line-height: 1.15;">Три инструмента, которые<br>работают вместо вас</div>
+        <div data-en="What I do" style="font-size: 13px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: #A78BFA; margin-bottom: 16px;">Чем я занимаюсь</div>
+        <div data-en="Three tools that&lt;br&gt;work instead of you" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 48px); line-height: 1.15;">Три инструмента, которые<br>работают вместо вас</div>
       </div>
-      <a href="uslugi.html" style="text-decoration: none; color: #C4B0FA; font-weight: 800; font-size: 15px; white-space: nowrap; border-bottom: 1px solid rgba(167,139,250,.4); padding-bottom: 3px;" style-hover="color: #F2F0F7;">Подробнее об услугах →</a>
+      <a href="uslugi.html" data-en="More about services →" style="text-decoration: none; color: #C4B0FA; font-weight: 800; font-size: 15px; white-space: nowrap; border-bottom: 1px solid rgba(167,139,250,.4); padding-bottom: 3px;" style-hover="color: #F2F0F7;">Подробнее об услугах →</a>
     </div>
     <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
       <a href="uslugi.html#calls" style="text-decoration: none; color: inherit; background: #0C0B12; border: 1px solid rgba(167,139,250,.14); border-radius: 24px; padding: 34px 30px; display: flex; flex-direction: column; gap: 16px; transition: border-color .3s, transform .3s;" style-hover="border-color: rgba(167,139,250,.5); transform: translateY(-4px);">
         <div style="font-family: Unbounded, sans-serif; font-size: 26px; font-weight: 700; color: #A78BFA;">01</div>
-        <div style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 20px; line-height: 1.3;">ИИ-администратор на телефоне</div>
-        <div style="font-size: 15px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Берёт трубку с первого гудка, отвечает голосом, записывает клиента и присылает вам отчёт. Ни одного пропущенного звонка — ни в обед, ни ночью.</div>
-        <div style="margin-top: auto; color: #C4B0FA; font-weight: 800; font-size: 14px;">Как это звучит →</div>
+        <div data-en="AI receptionist on the phone" style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 20px; line-height: 1.3;">ИИ-администратор на телефоне</div>
+        <div data-en="Picks up from the first ring, answers with a real-sounding voice, books the client and sends you a report. Not a single missed call — not at lunch, not at night." style="font-size: 15px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Берёт трубку с первого гудка, отвечает голосом, записывает клиента и присылает вам отчёт. Ни одного пропущенного звонка — ни в обед, ни ночью.</div>
+        <div data-en="Hear how it sounds →" style="margin-top: auto; color: #C4B0FA; font-weight: 800; font-size: 14px;">Как это звучит →</div>
       </a>
       <a href="uslugi.html#chats" style="text-decoration: none; color: inherit; background: #0C0B12; border: 1px solid rgba(167,139,250,.14); border-radius: 24px; padding: 34px 30px; display: flex; flex-direction: column; gap: 16px; transition: border-color .3s, transform .3s;" style-hover="border-color: rgba(167,139,250,.5); transform: translateY(-4px);">
         <div style="font-family: Unbounded, sans-serif; font-size: 26px; font-weight: 700; color: #A78BFA;">02</div>
-        <div style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 20px; line-height: 1.3;">ИИ-администратор в переписках</div>
-        <div style="font-size: 15px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Instagram, Telegram, WhatsApp — отвечает мгновенно, знает ваши цены и свободные окна, дожимает до записи. Клиент даже не поймёт, что это не вы.</div>
-        <div style="margin-top: auto; color: #C4B0FA; font-weight: 800; font-size: 14px;">Посмотреть диалог →</div>
+        <div data-en="AI receptionist in chats" style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 20px; line-height: 1.3;">ИИ-администратор в переписках</div>
+        <div data-en="Instagram, Telegram, WhatsApp — replies instantly, knows your prices and open slots, and closes the booking. The client won't even notice it isn't you." style="font-size: 15px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Instagram, Telegram, WhatsApp — отвечает мгновенно, знает ваши цены и свободные окна, дожимает до записи. Клиент даже не поймёт, что это не вы.</div>
+        <div data-en="See a sample chat →" style="margin-top: auto; color: #C4B0FA; font-weight: 800; font-size: 14px;">Посмотреть диалог →</div>
       </a>
       <a href="uslugi.html#sites" style="text-decoration: none; color: inherit; background: #0C0B12; border: 1px solid rgba(167,139,250,.14); border-radius: 24px; padding: 34px 30px; display: flex; flex-direction: column; gap: 16px; transition: border-color .3s, transform .3s;" style-hover="border-color: rgba(167,139,250,.5); transform: translateY(-4px);">
         <div style="font-family: Unbounded, sans-serif; font-size: 26px; font-weight: 700; color: #A78BFA;">03</div>
-        <div style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 20px; line-height: 1.3;">Лендинги и сайты</div>
-        <div style="font-size: 15px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Не «визитка для галочки», а страница, собранная под одну задачу: превращать посетителей в заявки. От лендинга до многостраничника.</div>
-        <div style="margin-top: auto; color: #C4B0FA; font-weight: 800; font-size: 14px;">Что входит →</div>
+        <div data-en="Landing pages & websites" style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 20px; line-height: 1.3;">Лендинги и сайты</div>
+        <div data-en="Not a &quot;nice to have&quot; brochure page, but a page built for one job: turning visitors into leads. From a single landing page to a full multi-page site." style="font-size: 15px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Не «визитка для галочки», а страница, собранная под одну задачу: превращать посетителей в заявки. От лендинга до многостраничника.</div>
+        <div data-en="What's included →" style="margin-top: auto; color: #C4B0FA; font-weight: 800; font-size: 14px;">Что входит →</div>
       </a>
     </div>
   </div>
@@ -87,13 +87,13 @@ a { color: #C4B0FA; }
   <div id="demoSection" style="border-top: 1px solid rgba(167,139,250,.1); border-bottom: 1px solid rgba(167,139,250,.1); background: radial-gradient(800px 500px at 30% 20%, rgba(124,92,252,.08), transparent 60%);">
     <div style="max-width: 1240px; margin: 0 auto; padding: 110px 40px;">
       <div style="text-align: center; margin-bottom: 56px;">
-        <div style="font-size: 13px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: #A78BFA; margin-bottom: 16px;">Живое демо</div>
-        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 48px); line-height: 1.15;">Вот как это выглядит<br>у ваших клиентов</div>
+        <div data-en="Live demo" style="font-size: 13px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: #A78BFA; margin-bottom: 16px;">Живое демо</div>
+        <div data-en="This is what your clients&lt;br&gt;actually see" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 48px); line-height: 1.15;">Вот как это выглядит<br>у ваших клиентов</div>
       </div>
       <div style="display: flex; justify-content: center;">
         <div style="width: 100%; max-width: 560px; background: #0C0B12; border: 1px solid rgba(167,139,250,.16); border-radius: 26px; padding: 32px; display: flex; flex-direction: column; gap: 18px; min-height: 480px;">
           <div id="chatBox" style="display: flex; flex-direction: column; gap: 12px;"></div>
-          <div style="margin-top: auto; font-size: 13px; font-weight: 700; color: #9B94AD; text-align: center; padding-top: 12px; border-top: 1px solid rgba(167,139,250,.1);">Это не скрипт с кнопками. ИИ понимает живой язык и ваши услуги.</div>
+          <div data-en="This isn't a button-driven script. The AI understands natural language and your actual services." style="margin-top: auto; font-size: 13px; font-weight: 700; color: #9B94AD; text-align: center; padding-top: 12px; border-top: 1px solid rgba(167,139,250,.1);">Это не скрипт с кнопками. ИИ понимает живой язык и ваши услуги.</div>
         </div>
       </div>
     </div>
@@ -101,28 +101,28 @@ a { color: #C4B0FA; }
 
   <!-- КАК ЭТО РАБОТАЕТ -->
   <div style="max-width: 1240px; margin: 0 auto; padding: 110px 40px;">
-    <div style="font-size: 13px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: #A78BFA; margin-bottom: 16px;">Как это работает</div>
-    <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 48px); line-height: 1.15; margin-bottom: 48px;">От заявки до запуска —<br>меньше недели</div>
+    <div data-en="How it works" style="font-size: 13px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: #A78BFA; margin-bottom: 16px;">Как это работает</div>
+    <div data-en="From request to launch —&lt;br&gt;in under a week" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 48px); line-height: 1.15; margin-bottom: 48px;">От заявки до запуска —<br>меньше недели</div>
     <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px;">
       <div style="border-top: 2px solid rgba(167,139,250,.4); padding-top: 22px; display: flex; flex-direction: column; gap: 12px;">
-        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 15px; color: #A78BFA;">Шаг 1</div>
-        <div style="font-weight: 800; font-size: 18px;">Знакомство с проектом</div>
-        <div style="font-size: 14.5px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Узнаём ваши задачи, услуги и процессы. После этого предлагаем решение, которое действительно подходит вашему бизнесу.</div>
+        <div data-en="Step 1" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 15px; color: #A78BFA;">Шаг 1</div>
+        <div data-en="Getting to know your project" style="font-weight: 800; font-size: 18px;">Знакомство с проектом</div>
+        <div data-en="We learn your tasks, services and processes. Then we propose a solution that actually fits your business." style="font-size: 14.5px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Узнаём ваши задачи, услуги и процессы. После этого предлагаем решение, которое действительно подходит вашему бизнесу.</div>
       </div>
       <div style="border-top: 2px solid rgba(167,139,250,.4); padding-top: 22px; display: flex; flex-direction: column; gap: 12px;">
-        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 15px; color: #A78BFA;">Шаг 2</div>
-        <div style="font-weight: 800; font-size: 18px;">Настройка под вас</div>
-        <div style="font-size: 14.5px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Загружаю ваши услуги, цены, расписание и манеру общения. ИИ говорит так, как говорили бы вы.</div>
+        <div data-en="Step 2" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 15px; color: #A78BFA;">Шаг 2</div>
+        <div data-en="Set up around you" style="font-weight: 800; font-size: 18px;">Настройка под вас</div>
+        <div data-en="I load in your services, prices, schedule and tone of voice. The AI talks the way you would." style="font-size: 14.5px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Загружаю ваши услуги, цены, расписание и манеру общения. ИИ говорит так, как говорили бы вы.</div>
       </div>
       <div style="border-top: 2px solid rgba(167,139,250,.4); padding-top: 22px; display: flex; flex-direction: column; gap: 12px;">
-        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 15px; color: #A78BFA;">Шаг 3</div>
-        <div style="font-weight: 800; font-size: 18px;">Тест на реальных клиентах</div>
-        <div style="font-size: 14.5px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Вы слушаете записи звонков и читаете переписки. Правим формулировки, пока не будет идеально.</div>
+        <div data-en="Step 3" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 15px; color: #A78BFA;">Шаг 3</div>
+        <div data-en="Testing on real clients" style="font-weight: 800; font-size: 18px;">Тест на реальных клиентах</div>
+        <div data-en="You listen to call recordings and read chat logs. We fine-tune the wording until it's spot on." style="font-size: 14.5px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Вы слушаете записи звонков и читаете переписки. Правим формулировки, пока не будет идеально.</div>
       </div>
       <div style="border-top: 2px solid rgba(167,139,250,.4); padding-top: 22px; display: flex; flex-direction: column; gap: 12px;">
-        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 15px; color: #A78BFA;">Шаг 4</div>
-        <div style="font-weight: 800; font-size: 18px;">Запуск</div>
-        <div style="font-size: 14.5px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Клиенты получают ответ мгновенно, вы — уведомление о каждой записи. И спокойно работаете.</div>
+        <div data-en="Step 4" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 15px; color: #A78BFA;">Шаг 4</div>
+        <div data-en="Launch" style="font-weight: 800; font-size: 18px;">Запуск</div>
+        <div data-en="Clients get an instant reply, you get a notification for every booking. And you work in peace." style="font-size: 14.5px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Клиенты получают ответ мгновенно, вы — уведомление о каждой записи. И спокойно работаете.</div>
       </div>
     </div>
   </div>
@@ -131,33 +131,33 @@ a { color: #C4B0FA; }
   <div style="border-top: 1px solid rgba(167,139,250,.1);">
     <div style="max-width: 1240px; margin: 0 auto; padding: 110px 40px;">
       <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 48px;">
-        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 48px); line-height: 1.15;">Цены без «оставьте<br>заявку и узнаете»</div>
-        <a href="ceny.html" style="text-decoration: none; color: #C4B0FA; font-weight: 800; font-size: 15px; white-space: nowrap; border-bottom: 1px solid rgba(167,139,250,.4); padding-bottom: 3px;" style-hover="color: #F2F0F7;">Все тарифы →</a>
+        <div data-en="Pricing without &quot;leave a&lt;br&gt;request to find out&quot;" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 48px); line-height: 1.15;">Цены без «оставьте<br>заявку и узнаете»</div>
+        <a href="ceny.html" data-en="All plans →" style="text-decoration: none; color: #C4B0FA; font-weight: 800; font-size: 15px; white-space: nowrap; border-bottom: 1px solid rgba(167,139,250,.4); padding-bottom: 3px;" style-hover="color: #F2F0F7;">Все тарифы →</a>
       </div>
       <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 20px;">
         <div style="background: #0C0B12; border: 1px solid rgba(167,139,250,.14); border-radius: 20px; padding: 24px 22px; display: flex; flex-direction: column; gap: 6px;">
-          <div style="font-weight: 800; font-size: 14px; color: #9B94AD;">ИИ-администратор</div>
-          <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 28px;">200 <span style="font-size: 15px; color: #9B94AD;">BYN</span></div>
-          <div style="font-size: 12.5px; color: #9B94AD; font-weight: 600;">+ 100 BYN/мес подписка обязательна</div>
+          <div data-en="AI receptionist" style="font-weight: 800; font-size: 14px; color: #9B94AD;">ИИ-администратор</div>
+          <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 28px;"><span data-byn="199">199</span> <span data-cur style="font-size: 15px; color: #9B94AD;">BYN</span></div>
+          <div data-en="+ 99 BYN/mo subscription required" style="font-size: 12.5px; color: #9B94AD; font-weight: 600;">+ 99 BYN/мес подписка обязательна</div>
         </div>
         <div style="background: #0C0B12; border: 1px solid rgba(167,139,250,.14); border-radius: 20px; padding: 24px 22px; display: flex; flex-direction: column; gap: 6px;">
-          <div style="font-weight: 800; font-size: 14px; color: #9B94AD;">Лендинг</div>
-          <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 28px;">200 <span style="font-size: 15px; color: #9B94AD;">BYN</span></div>
+          <div data-en="Landing page" style="font-weight: 800; font-size: 14px; color: #9B94AD;">Лендинг</div>
+          <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 28px;"><span data-byn="199">199</span> <span data-cur style="font-size: 15px; color: #9B94AD;">BYN</span></div>
         </div>
         <div style="background: #0C0B12; border: 1px solid rgba(167,139,250,.14); border-radius: 20px; padding: 24px 22px; display: flex; flex-direction: column; gap: 6px;">
-          <div style="font-weight: 800; font-size: 14px; color: #9B94AD;">Многостраничный сайт</div>
-          <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 28px;">450 <span style="font-size: 15px; color: #9B94AD;">BYN</span></div>
+          <div data-en="Multi-page website" style="font-weight: 800; font-size: 14px; color: #9B94AD;">Многостраничный сайт</div>
+          <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 28px;"><span data-byn="449">449</span> <span data-cur style="font-size: 15px; color: #9B94AD;">BYN</span></div>
         </div>
       </div>
       <div style="background: linear-gradient(160deg, rgba(167,139,250,.16), rgba(124,92,252,.06)); border: 1px solid rgba(167,139,250,.4); border-radius: 24px; padding: 30px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; position: relative;">
-        <div style="position: absolute; top: -12px; left: 32px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); padding: 6px 14px; border-radius: 100px;">Горячее предложение</div>
+        <div data-en="Hot deal" style="position: absolute; top: -12px; left: 32px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); padding: 6px 14px; border-radius: 100px;">Горячее предложение</div>
         <div>
-          <div style="font-weight: 800; font-size: 16px; color: #C4B0FA; margin-bottom: 6px;">Лендинг + ИИ-администратор</div>
-          <div style="font-size: 14px; color: #9B94AD; font-weight: 600;">Сайт продаёт — ИИ дожимает до записи</div>
+          <div data-en="Landing page + AI receptionist" style="font-weight: 800; font-size: 16px; color: #C4B0FA; margin-bottom: 6px;">Лендинг + ИИ-администратор</div>
+          <div data-en="The site sells — the AI closes the booking" style="font-size: 14px; color: #9B94AD; font-weight: 600;">Сайт продаёт — ИИ дожимает до записи</div>
         </div>
         <div style="display: flex; align-items: baseline; gap: 20px;">
-          <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 34px;">350 <span style="font-size: 18px; color: #9B94AD;">BYN</span></div>
-          <a href="ceny.html" style="text-decoration: none; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); font-weight: 800; font-size: 14px; padding: 12px 24px; border-radius: 100px; white-space: nowrap;" style-hover="filter: brightness(1.12);">Все связки →</a>
+          <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 34px;"><span data-byn="349">349</span> <span data-cur style="font-size: 18px; color: #9B94AD;">BYN</span></div>
+          <a href="ceny.html" data-en="All bundles →" style="text-decoration: none; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); font-weight: 800; font-size: 14px; padding: 12px 24px; border-radius: 100px; white-space: nowrap;" style-hover="filter: brightness(1.12);">Все связки →</a>
         </div>
       </div>
     </div>
@@ -167,8 +167,8 @@ a { color: #C4B0FA; }
   <div style="border-top: 1px solid rgba(167,139,250,.1);">
     <div style="max-width: 900px; margin: 0 auto; padding: 110px 40px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 26px;">
       <img src="assets/logo-mark.png" alt="Bloom Space Web" style="width: 96px; animation: bswFloat 4s ease-in-out infinite;">
-      <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(26px, 2.8vw, 40px); line-height: 1.2;">Не агентство. Один человек,<br>который отвечает за результат</div>
-      <div style="font-size: 17px; line-height: 1.75; color: #9B94AD; font-weight: 500; max-width: 640px;">Bloom Space Web — это я. Вы пишете мне напрямую, я сам собираю ваш проект и сам его поддерживаю. Никаких менеджеров, «передам разработчику» и недельных согласований. Поэтому запуск занимает дни, а не месяцы — и стоит как у фрилансера, а работает как у студии.</div>
+      <div data-en="Not an agency. One person&lt;br&gt;who's accountable for the result" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(26px, 2.8vw, 40px); line-height: 1.2;">Не агентство. Один человек,<br>который отвечает за результат</div>
+      <div data-en="Bloom Space Web is me. You message me directly, I build your project myself and support it myself. No managers, no &quot;I'll pass it to the developer&quot;, no week-long approvals. That's why launch takes days, not months — priced like a freelancer, works like a studio." style="font-size: 17px; line-height: 1.75; color: #9B94AD; font-weight: 500; max-width: 640px;">Bloom Space Web — это я. Вы пишете мне напрямую, я сам собираю ваш проект и сам его поддерживаю. Никаких менеджеров, «передам разработчику» и недельных согласований. Поэтому запуск занимает дни, а не месяцы — и стоит как у фрилансера, а работает как у студии.</div>
     </div>
   </div>
 
@@ -176,36 +176,36 @@ a { color: #C4B0FA; }
   <div id="form" style="border-top: 1px solid rgba(167,139,250,.1); background: radial-gradient(800px 500px at 70% 30%, rgba(124,92,252,.1), transparent 60%);">
     <div style="max-width: 1240px; margin: 0 auto; padding: 110px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
       <div style="display: flex; flex-direction: column; gap: 22px;">
-        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 50px); line-height: 1.12;">Сколько клиентов вы потеряли, пока читали эту страницу?</div>
-        <div style="font-size: 17px; line-height: 1.7; color: #9B94AD; font-weight: 500;">Оставьте заявку — за 15 минут разберём вашу ситуацию, и я скажу честно, что вам нужно, а что нет. Без впаривания.</div>
+        <div data-en="How many clients have you lost while reading this page?" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 50px); line-height: 1.12;">Сколько клиентов вы потеряли, пока читали эту страницу?</div>
+        <div data-en="Leave a request — in 15 minutes we'll go through your situation, and I'll tell you honestly what you need and what you don't. No hard sell." style="font-size: 17px; line-height: 1.7; color: #9B94AD; font-weight: 500;">Оставьте заявку — за 15 минут разберём вашу ситуацию, и я скажу честно, что вам нужно, а что нет. Без впаривания.</div>
       </div>
       <div id="formCard" style="background: #0C0B12; border: 1px solid rgba(167,139,250,.2); border-radius: 26px; padding: 40px; display: flex; flex-direction: column; gap: 18px;">
-        <input id="fName" maxlength="80" placeholder="Как вас зовут" style="background: #13111B; border: 1px solid rgba(167,139,250,.16); border-radius: 14px; padding: 16px 18px; font-size: 15px; color: #F2F0F7; font-family: Manrope, sans-serif; font-weight: 600; outline: none;" style-focus="border-color: rgba(167,139,250,.6);">
+        <input id="fName" maxlength="80" placeholder="Как вас зовут" data-en-placeholder="Your name" style="background: #13111B; border: 1px solid rgba(167,139,250,.16); border-radius: 14px; padding: 16px 18px; font-size: 15px; color: #F2F0F7; font-family: Manrope, sans-serif; font-weight: 600; outline: none;" style-focus="border-color: rgba(167,139,250,.6);">
         <div style="display: grid; grid-template-columns: 150px 1fr; gap: 10px;">
           <select id="fWay" style="cursor: pointer; background-color: #13111B; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%23C4B0FA' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E&quot;); background-repeat: no-repeat; background-position: right 14px center; border: 1px solid rgba(167,139,250,.16); border-radius: 14px; padding: 16px 34px 16px 14px; font-size: 15px; color: #F2F0F7; font-family: Manrope, sans-serif; font-weight: 600; outline: none; appearance: none;">
             <option value="Telegram">Telegram</option>
             <option value="Instagram">Instagram</option>
-            <option value="Телефон">Телефон</option>
+            <option value="Телефон" data-en="Phone">Телефон</option>
             <option value="WhatsApp">WhatsApp</option>
           </select>
-          <input id="fContact" maxlength="120" placeholder="@ник или номер" style="background: #13111B; border: 1px solid rgba(167,139,250,.16); border-radius: 14px; padding: 16px 18px; font-size: 15px; color: #F2F0F7; font-family: Manrope, sans-serif; font-weight: 600; outline: none;" style-focus="border-color: rgba(167,139,250,.6);">
+          <input id="fContact" maxlength="120" placeholder="@ник или номер" data-en-placeholder="@handle or number" style="background: #13111B; border: 1px solid rgba(167,139,250,.16); border-radius: 14px; padding: 16px 18px; font-size: 15px; color: #F2F0F7; font-family: Manrope, sans-serif; font-weight: 600; outline: none;" style-focus="border-color: rgba(167,139,250,.6);">
         </div>
-        <div id="privacyHint" style="font-size: 12.5px; color: #9B94AD; font-weight: 600; line-height: 1.5; margin-top: -8px;">Проверьте, что профиль открыт и принимает сообщения — иначе я не смогу вам написать</div>
+        <div id="privacyHint" data-en="Make sure your profile is open and accepts messages — otherwise I won't be able to write to you" style="font-size: 12.5px; color: #9B94AD; font-weight: 600; line-height: 1.5; margin-top: -8px;">Проверьте, что профиль открыт и принимает сообщения — иначе я не смогу вам написать</div>
         <input id="fCompany" tabindex="-1" autocomplete="off" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0;" aria-hidden="true">
         <select id="fNeed" style="cursor: pointer; background-color: #13111B; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%23C4B0FA' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E&quot;); background-repeat: no-repeat; background-position: right 18px center; border: 1px solid rgba(167,139,250,.16); border-radius: 14px; padding: 16px 40px 16px 18px; font-size: 15px; color: #F2F0F7; font-family: Manrope, sans-serif; font-weight: 600; outline: none; appearance: none;">
-          <option value="ИИ-администратор">Нужен ИИ-администратор</option>
-          <option value="Сайт">Нужен сайт или лендинг</option>
-          <option value="Сайт + ИИ">Сайт + ИИ-администратор</option>
-          <option value="Не знаю">Пока не знаю — разберитесь со мной</option>
+          <option value="ИИ-администратор" data-en="I need an AI receptionist">Нужен ИИ-администратор</option>
+          <option value="Сайт" data-en="I need a website or landing page">Нужен сайт или лендинг</option>
+          <option value="Сайт + ИИ" data-en="Website + AI receptionist">Сайт + ИИ-администратор</option>
+          <option value="Не знаю" data-en="Not sure yet — help me figure it out">Пока не знаю — разберитесь со мной</option>
         </select>
-        <button id="fSubmit" style="cursor: pointer; border: none; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); color: #0B0714; font-family: Manrope, sans-serif; font-weight: 800; font-size: 16px; padding: 17px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Получить план и цену</button>
-        <div style="font-size: 12.5px; color: #9B94AD; font-weight: 600; text-align: center;">Отвечаю лично, обычно в течение пары часов</div>
-        <div style="font-size: 12px; color: #6E6880; font-weight: 500; text-align: center; line-height: 1.5;">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html" style="color: #9B94AD;" style-hover="color: #C4B0FA;">политикой конфиденциальности</a></div>
+        <button id="fSubmit" data-en="Get a plan and a price" style="cursor: pointer; border: none; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); color: #0B0714; font-family: Manrope, sans-serif; font-weight: 800; font-size: 16px; padding: 17px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Получить план и цену</button>
+        <div data-en="I reply personally, usually within a couple of hours" style="font-size: 12.5px; color: #9B94AD; font-weight: 600; text-align: center;">Отвечаю лично, обычно в течение пары часов</div>
+        <div data-en="By clicking the button, you agree to the &lt;a href=&quot;privacy.html&quot; style=&quot;color: #9B94AD;&quot;&gt;privacy policy&lt;/a&gt;" style="font-size: 12px; color: #6E6880; font-weight: 500; text-align: center; line-height: 1.5;">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html" style="color: #9B94AD;" style-hover="color: #C4B0FA;">политикой конфиденциальности</a></div>
       </div>
       <div id="sentCard" style="display: none; background: #0C0B12; border: 1px solid rgba(125,227,168,.35); border-radius: 26px; padding: 48px 40px; flex-direction: column; gap: 16px; align-items: center; text-align: center;">
         <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(125,227,168,.12); border: 1px solid rgba(125,227,168,.4); display: flex; align-items: center; justify-content: center; color: #7DE3A8; font-size: 24px; font-weight: 800;">✓</div>
-        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 22px;">Заявка у меня</div>
-        <div style="font-size: 15px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Напишу вам в ближайшие пару часов. Если срочно — <a href="mailto:bloomspaceweb555@gmail.com" style="color: #C4B0FA;">bloomspaceweb555@gmail.com</a></div>
+        <div data-en="Got your request" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 22px;">Заявка у меня</div>
+        <div data-en="I'll write to you within a couple of hours. If it's urgent — &lt;a href=&quot;mailto:bloomspaceweb555@gmail.com&quot; style=&quot;color: #C4B0FA;&quot;&gt;bloomspaceweb555@gmail.com&lt;/a&gt;" style="font-size: 15px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Напишу вам в ближайшие пару часов. Если срочно — <a href="mailto:bloomspaceweb555@gmail.com" style="color: #C4B0FA;">bloomspaceweb555@gmail.com</a></div>
       </div>
     </div>
   </div>
@@ -216,10 +216,10 @@ a { color: #C4B0FA; }
       <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
         <img src="assets/logo-full.png" alt="Bloom Space Web" style="height: 28px;">
         <div style="display: flex; gap: 28px;">
-          <a href="uslugi.html" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Услуги</a>
-          <a href="ceny.html" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Цены</a>
-          <a href="#form" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Заявка</a>
-          <a href="privacy.html" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Политика конфиденциальности</a>
+          <a href="uslugi.html" data-en="Services" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Услуги</a>
+          <a href="ceny.html" data-en="Pricing" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Цены</a>
+          <a href="#form" data-en="Request" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Заявка</a>
+          <a href="privacy.html" data-en="Privacy Policy" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Политика конфиденциальности</a>
         </div>
         <div style="display: flex; gap: 12px; align-items: center;">
           <a href="https://www.instagram.com/bloomspaceweb?igsh=MXhvbXh2OG9zN2hxcQ%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(167,139,250,.25); color: #C4B0FA;" style-hover="border-color: rgba(167,139,250,.7); color: #F2F0F7;">
@@ -262,10 +262,10 @@ setInterval(function(){
 
 // чат-демо
 var CHAT = [
-  { me: false, text: 'Добрый вечер! А завтра есть свободное время на стрижку?' },
-  { me: true, text: 'Добрый вечер! Завтра свободно 12:30 и 18:00. Стрижка — 35 BYN. Какое время удобнее?' },
-  { me: false, text: 'В 18:00, после работы' },
-  { me: true, text: 'Записала вас на 18:00 к мастеру Ане. Адрес: пр. Победителей 65. До встречи!' }
+  { me: false, text: 'Добрый вечер! А завтра есть свободное время на стрижку?', textEn: 'Good evening! Do you have any time free tomorrow for a haircut?' },
+  { me: true, text: 'Добрый вечер! Завтра свободно 12:30 и 18:00. Стрижка — 35 BYN. Какое время удобнее?', textEn: 'Good evening! Tomorrow 12:30 and 18:00 are free. A haircut is 35 BYN. Which time works better?' },
+  { me: false, text: 'В 18:00, после работы', textEn: '18:00, after work' },
+  { me: true, text: 'Записала вас на 18:00 к мастеру Ане. Адрес: пр. Победителей 65. До встречи!', textEn: "Booked you for 18:00 with stylist Anna. Address: 65 Pobediteley Ave. See you then!" }
 ];
 var chatBox = document.getElementById('chatBox');
 CHAT.forEach(function(m){
@@ -274,6 +274,7 @@ CHAT.forEach(function(m){
   var bubble = document.createElement('div');
   bubble.style.cssText = 'max-width:78%;background:' + (m.me ? 'linear-gradient(135deg, rgba(167,139,250,.28), rgba(124,92,252,.22))' : '#17151F') + ';border:1px solid ' + (m.me ? 'rgba(167,139,250,.25)' : 'rgba(167,139,250,.06)') + ';border-radius:' + (m.me ? '18px 18px 6px 18px' : '18px 18px 18px 6px') + ';padding:12px 16px;font-size:14px;line-height:1.55;color:#F0EDF8;';
   bubble.textContent = m.text;
+  bubble.setAttribute('data-en', m.textEn);
   row.appendChild(bubble);
   chatBox.appendChild(row);
 });

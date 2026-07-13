@@ -6,7 +6,7 @@
 <title>Цены — Bloom Space Web</title>
 </head>
 <body>
-
+<script src="assets/geo.js"></script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -25,91 +25,91 @@ body { margin: 0; background: #050506; }
       <img src="assets/logo-full.png" alt="Bloom Space Web" style="height: 34px;">
     </a>
     <div style="display: flex; align-items: center; gap: 32px;">
-      <a href="index.html" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600;" style-hover="color: #F2F0F7;">Главная</a>
-      <a href="uslugi.html" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600;" style-hover="color: #F2F0F7;">Услуги</a>
-      <a href="ceny.html" style="color: #F2F0F7; text-decoration: none; font-size: 14px; font-weight: 700;">Цены</a>
-      <a href="index.html#form" style="color: #0B0714; text-decoration: none; font-size: 13px; font-weight: 800; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); padding: 10px 22px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Оставить заявку</a>
+      <a href="index.html" data-en="Home" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600;" style-hover="color: #F2F0F7;">Главная</a>
+      <a href="uslugi.html" data-en="Services" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600;" style-hover="color: #F2F0F7;">Услуги</a>
+      <a href="ceny.html" data-en="Pricing" style="color: #F2F0F7; text-decoration: none; font-size: 14px; font-weight: 700;">Цены</a>
+      <a href="index.html#form" data-en="Get a quote" style="color: #0B0714; text-decoration: none; font-size: 13px; font-weight: 800; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); padding: 10px 22px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Оставить заявку</a>
     </div>
   </div>
 
   <!-- HEADER -->
   <div data-screen-label="Заголовок" style="max-width: 1240px; margin: 0 auto; padding: 170px 40px 70px;">
-    <div style="font-size: 13px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: #A78BFA; margin-bottom: 18px;">Цены</div>
-    <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(36px, 4.4vw, 64px); line-height: 1.1; max-width: 880px;">Честные цены. Прямо здесь, без звонка менеджера</div>
-    <div style="font-size: 18px; line-height: 1.7; color: #9B94AD; font-weight: 500; max-width: 620px; margin-top: 24px;">Фиксированная стоимость — вы знаете финальную цифру до старта. Предоплата 50 BYN, остальное после сдачи работы.</div>
+    <div data-en="Pricing" style="font-size: 13px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: #A78BFA; margin-bottom: 18px;">Цены</div>
+    <div data-en="Honest pricing. Right here, no sales call needed" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(36px, 4.4vw, 64px); line-height: 1.1; max-width: 880px;">Честные цены. Прямо здесь, без звонка менеджера</div>
+    <div data-en="Fixed price — you know the final number before we start. A 49 BYN deposit, the rest after the work is delivered." style="font-size: 18px; line-height: 1.7; color: #9B94AD; font-weight: 500; max-width: 620px; margin-top: 24px;">Фиксированная стоимость — вы знаете финальную цифру до старта. Предоплата 49 BYN, остальное после сдачи работы.</div>
   </div>
 
   <!-- ТАРИФЫ -->
   <div data-screen-label="Тарифы" style="max-width: 1240px; margin: 0 auto; padding: 0 40px 60px;">
-    <div style="font-size: 13px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #9B94AD; margin-bottom: 18px;">По отдельности</div>
+    <div data-en="A la carte" style="font-size: 13px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #9B94AD; margin-bottom: 18px;">По отдельности</div>
     <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 44px;">
 
       <div style="background: #0C0B12; border: 1px solid rgba(167,139,250,.14); border-radius: 26px; padding: 32px 28px; display: flex; flex-direction: column; gap: 18px;">
-        <div style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 17px;">ИИ-администратор</div>
-        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 38px;">200 <span style="font-size: 18px; color: #9B94AD;">BYN</span></div>
-        <div style="font-size: 13.5px; font-weight: 700; color: #C4B0FA;">+ 100 BYN/мес — подписка обязательна</div>
+        <div data-en="AI receptionist" style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 17px;">ИИ-администратор</div>
+        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 38px;"><span data-byn="199">199</span> <span data-cur style="font-size: 18px; color: #9B94AD;">BYN</span></div>
+        <div data-en="+ 99 BYN/mo — subscription required" style="font-size: 13.5px; font-weight: 700; color: #C4B0FA;">+ 99 BYN/мес — подписка обязательна</div>
         <div style="display: flex; flex-direction: column; gap: 10px; padding-top: 4px; border-top: 1px solid rgba(167,139,250,.12);">
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Звонки, переписки или всё вместе</span></div>
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Настройка под ваши услуги и цены</span></div>
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Подписка = поддержка, обновления, я на связи</span></div>
+          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Calls, chats, or both together" style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Звонки, переписки или всё вместе</span></div>
+          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Configured for your services and prices" style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Настройка под ваши услуги и цены</span></div>
+          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Subscription = support, updates, I'm on call" style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Подписка = поддержка, обновления, я на связи</span></div>
         </div>
-        <a href="index.html#form" style="margin-top: auto; text-align: center; text-decoration: none; color: #F2F0F7; border: 1px solid rgba(167,139,250,.3); font-weight: 800; font-size: 14px; padding: 13px; border-radius: 100px;" style-hover="border-color: rgba(167,139,250,.7);">Выбрать</a>
+        <a href="index.html#form" data-en="Choose" style="margin-top: auto; text-align: center; text-decoration: none; color: #F2F0F7; border: 1px solid rgba(167,139,250,.3); font-weight: 800; font-size: 14px; padding: 13px; border-radius: 100px;" style-hover="border-color: rgba(167,139,250,.7);">Выбрать</a>
       </div>
 
       <div style="background: #0C0B12; border: 1px solid rgba(167,139,250,.14); border-radius: 26px; padding: 32px 28px; display: flex; flex-direction: column; gap: 18px;">
-        <div style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 17px;">Лендинг</div>
-        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 38px;">200 <span style="font-size: 18px; color: #9B94AD;">BYN</span></div>
+        <div data-en="Landing page" style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 17px;">Лендинг</div>
+        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 38px;"><span data-byn="199">199</span> <span data-cur style="font-size: 18px; color: #9B94AD;">BYN</span></div>
         <div style="display: flex; flex-direction: column; gap: 10px; padding-top: 4px; border-top: 1px solid rgba(167,139,250,.12);">
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Дизайн под бренд, не шаблон</span></div>
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Продающие тексты — пишу сам</span></div>
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Готов к запуску рекламы</span></div>
+          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Design built for your brand, not a template" style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Дизайн под бренд, не шаблон</span></div>
+          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Selling copy — written by me" style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Продающие тексты — пишу сам</span></div>
+          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Ready to run ads on day one" style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Готов к запуску рекламы</span></div>
         </div>
-        <a href="index.html#form" style="margin-top: auto; text-align: center; text-decoration: none; color: #F2F0F7; border: 1px solid rgba(167,139,250,.3); font-weight: 800; font-size: 14px; padding: 13px; border-radius: 100px;" style-hover="border-color: rgba(167,139,250,.7);">Выбрать</a>
+        <a href="index.html#form" data-en="Choose" style="margin-top: auto; text-align: center; text-decoration: none; color: #F2F0F7; border: 1px solid rgba(167,139,250,.3); font-weight: 800; font-size: 14px; padding: 13px; border-radius: 100px;" style-hover="border-color: rgba(167,139,250,.7);">Выбрать</a>
       </div>
 
       <div style="background: #0C0B12; border: 1px solid rgba(167,139,250,.14); border-radius: 26px; padding: 32px 28px; display: flex; flex-direction: column; gap: 18px;">
-        <div style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 17px;">Многостраничный сайт</div>
-        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 38px;">450 <span style="font-size: 18px; color: #9B94AD;">BYN</span></div>
+        <div data-en="Multi-page website" style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 17px;">Многостраничный сайт</div>
+        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 38px;"><span data-byn="449">449</span> <span data-cur style="font-size: 18px; color: #9B94AD;">BYN</span></div>
         <div style="display: flex; flex-direction: column; gap: 10px; padding-top: 4px; border-top: 1px solid rgba(167,139,250,.12);">
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Несколько страниц под весь бизнес</span></div>
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Продающие тексты — пишу сам</span></div>
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Корректно на телефоне, готов к рекламе</span></div>
+          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Several pages covering your whole business" style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Несколько страниц под весь бизнес</span></div>
+          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Selling copy — written by me" style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Продающие тексты — пишу сам</span></div>
+          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Looks right on phones, ready for ads" style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Корректно на телефоне, готов к рекламе</span></div>
         </div>
-        <a href="index.html#form" style="margin-top: auto; text-align: center; text-decoration: none; color: #F2F0F7; border: 1px solid rgba(167,139,250,.3); font-weight: 800; font-size: 14px; padding: 13px; border-radius: 100px;" style-hover="border-color: rgba(167,139,250,.7);">Выбрать</a>
+        <a href="index.html#form" data-en="Choose" style="margin-top: auto; text-align: center; text-decoration: none; color: #F2F0F7; border: 1px solid rgba(167,139,250,.3); font-weight: 800; font-size: 14px; padding: 13px; border-radius: 100px;" style-hover="border-color: rgba(167,139,250,.7);">Выбрать</a>
       </div>
 
     </div>
 
-    <div style="font-size: 13px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #9B94AD; margin-bottom: 18px;">Горячие предложения</div>
+    <div data-en="Hot deals" style="font-size: 13px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #9B94AD; margin-bottom: 18px;">Горячие предложения</div>
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
 
       <div style="background: linear-gradient(165deg, rgba(167,139,250,.16), rgba(124,92,252,.05)); border: 1px solid rgba(167,139,250,.45); border-radius: 26px; padding: 38px 34px; display: flex; flex-direction: column; gap: 20px; position: relative;">
-        <div style="position: absolute; top: -13px; left: 34px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); padding: 7px 16px; border-radius: 100px;">Берут чаще всего</div>
-        <div style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 19px;">Лендинг + ИИ-администратор</div>
+        <div data-en="Most popular" style="position: absolute; top: -13px; left: 34px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); padding: 7px 16px; border-radius: 100px;">Берут чаще всего</div>
+        <div data-en="Landing page + AI receptionist" style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 19px;">Лендинг + ИИ-администратор</div>
         <div style="display: flex; align-items: baseline; gap: 12px;">
-          <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 44px;">350 <span style="font-size: 20px; color: #9B94AD;">BYN</span></div>
-          <div style="font-size: 15px; font-weight: 700; color: #9B94AD; text-decoration: line-through;">400</div>
+          <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 44px;"><span data-byn="349">349</span> <span data-cur style="font-size: 20px; color: #9B94AD;">BYN</span></div>
+          <div style="font-size: 15px; font-weight: 700; color: #9B94AD; text-decoration: line-through;"><span data-byn="399">399</span></div>
         </div>
         <div style="display: flex; flex-direction: column; gap: 11px; padding-top: 6px; border-top: 1px solid rgba(167,139,250,.2);">
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span style="font-size: 14.5px; line-height: 1.55; color: #F0EDF8; font-weight: 600;">Сайт приводит клиента — ИИ доводит до записи</span></div>
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span style="font-size: 14.5px; line-height: 1.55; color: #F0EDF8; font-weight: 600;">Всё из тарифов «Лендинг» и «ИИ-администратор»</span></div>
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span style="font-size: 14.5px; line-height: 1.55; color: #F0EDF8; font-weight: 600;">Экономия 50 BYN против покупки по отдельности</span></div>
+          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="The site brings the client — the AI closes the booking" style="font-size: 14.5px; line-height: 1.55; color: #F0EDF8; font-weight: 600;">Сайт приводит клиента — ИИ доводит до записи</span></div>
+          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Everything from the &quot;Landing page&quot; and &quot;AI receptionist&quot; plans" style="font-size: 14.5px; line-height: 1.55; color: #F0EDF8; font-weight: 600;">Всё из тарифов «Лендинг» и «ИИ-администратор»</span></div>
+          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Save 50 BYN vs. buying separately" style="font-size: 14.5px; line-height: 1.55; color: #F0EDF8; font-weight: 600;">Экономия 50 BYN против покупки по отдельности</span></div>
         </div>
-        <a href="index.html#form" style="margin-top: auto; text-align: center; text-decoration: none; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); font-weight: 800; font-size: 15px; padding: 15px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Выбрать связку</a>
+        <a href="index.html#form" data-en="Choose this bundle" style="margin-top: auto; text-align: center; text-decoration: none; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); font-weight: 800; font-size: 15px; padding: 15px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Выбрать связку</a>
       </div>
 
       <div style="background: linear-gradient(165deg, rgba(167,139,250,.16), rgba(124,92,252,.05)); border: 1px solid rgba(167,139,250,.45); border-radius: 26px; padding: 38px 34px; display: flex; flex-direction: column; gap: 20px; position: relative;">
-        <div style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 19px;">Многостраничный сайт + ИИ-администратор</div>
+        <div data-en="Multi-page website + AI receptionist" style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 19px;">Многостраничный сайт + ИИ-администратор</div>
         <div style="display: flex; align-items: baseline; gap: 12px;">
-          <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 44px;">550 <span style="font-size: 20px; color: #9B94AD;">BYN</span></div>
-          <div style="font-size: 15px; font-weight: 700; color: #9B94AD; text-decoration: line-through;">650</div>
+          <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 44px;"><span data-byn="549">549</span> <span data-cur style="font-size: 20px; color: #9B94AD;">BYN</span></div>
+          <div style="font-size: 15px; font-weight: 700; color: #9B94AD; text-decoration: line-through;"><span data-byn="649">649</span></div>
         </div>
         <div style="display: flex; flex-direction: column; gap: 11px; padding-top: 6px; border-top: 1px solid rgba(167,139,250,.2);">
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span style="font-size: 14.5px; line-height: 1.55; color: #F0EDF8; font-weight: 600;">Сайт приводит клиента — ИИ доводит до записи</span></div>
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span style="font-size: 14.5px; line-height: 1.55; color: #F0EDF8; font-weight: 600;">Всё из тарифов «Многостраничный сайт» и «ИИ-администратор»</span></div>
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span style="font-size: 14.5px; line-height: 1.55; color: #F0EDF8; font-weight: 600;">Экономия 100 BYN против покупки по отдельности</span></div>
+          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="The site brings the client — the AI closes the booking" style="font-size: 14.5px; line-height: 1.55; color: #F0EDF8; font-weight: 600;">Сайт приводит клиента — ИИ доводит до записи</span></div>
+          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Everything from the &quot;Multi-page website&quot; and &quot;AI receptionist&quot; plans" style="font-size: 14.5px; line-height: 1.55; color: #F0EDF8; font-weight: 600;">Всё из тарифов «Многостраничный сайт» и «ИИ-администратор»</span></div>
+          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Save 100 BYN vs. buying separately" style="font-size: 14.5px; line-height: 1.55; color: #F0EDF8; font-weight: 600;">Экономия 100 BYN против покупки по отдельности</span></div>
         </div>
-        <a href="index.html#form" style="margin-top: auto; text-align: center; text-decoration: none; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); font-weight: 800; font-size: 15px; padding: 15px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Выбрать связку</a>
+        <a href="index.html#form" data-en="Choose this bundle" style="margin-top: auto; text-align: center; text-decoration: none; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); font-weight: 800; font-size: 15px; padding: 15px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Выбрать связку</a>
       </div>
 
     </div>
@@ -119,16 +119,16 @@ body { margin: 0; background: #050506; }
   <div data-screen-label="Условия" style="max-width: 1240px; margin: 0 auto; padding: 20px 40px 100px;">
     <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
       <div style="border-top: 2px solid rgba(167,139,250,.4); padding-top: 20px;">
-        <div style="font-weight: 800; font-size: 16px; margin-bottom: 8px;">Предоплата — 50 BYN</div>
-        <div style="font-size: 14.5px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Фиксирует место в очереди и старт работы. Остальное — после того, как вы приняли результат.</div>
+        <div data-en="Deposit — 49 BYN" style="font-weight: 800; font-size: 16px; margin-bottom: 8px;">Предоплата — 49 BYN</div>
+        <div data-en="Secures your spot in the queue and starts the work. The rest is paid once you've accepted the result." style="font-size: 14.5px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Фиксирует место в очереди и старт работы. Остальное — после того, как вы приняли результат.</div>
       </div>
       <div style="border-top: 2px solid rgba(167,139,250,.4); padding-top: 20px;">
-        <div style="font-weight: 800; font-size: 16px; margin-bottom: 8px;">Подписка — 100 BYN/мес, обязательна</div>
-        <div style="font-size: 14.5px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Без неё ИИ-администратор не работает: подписка покрывает саму работу ИИ, обновления и мою поддержку на связи.</div>
+        <div data-en="Subscription — 99 BYN/mo, required" style="font-weight: 800; font-size: 16px; margin-bottom: 8px;">Подписка — 99 BYN/мес, обязательна</div>
+        <div data-en="Without it the AI receptionist doesn't run: the subscription covers the AI itself, updates, and me staying on call for support." style="font-size: 14.5px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Без неё ИИ-администратор не работает: подписка покрывает саму работу ИИ, обновления и мою поддержку на связи.</div>
       </div>
       <div style="border-top: 2px solid rgba(167,139,250,.4); padding-top: 20px;">
-        <div style="font-weight: 800; font-size: 16px; margin-bottom: 8px;">Без скрытых доплат</div>
-        <div style="font-size: 14.5px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Цена, названная до старта, — финальная. Если по ходу нужно больше, обсуждаем до, а не после.</div>
+        <div data-en="No hidden fees" style="font-weight: 800; font-size: 16px; margin-bottom: 8px;">Без скрытых доплат</div>
+        <div data-en="The price named before we start is final. If more turns out to be needed along the way, we discuss it upfront, not after." style="font-size: 14.5px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Цена, названная до старта, — финальная. Если по ходу нужно больше, обсуждаем до, а не после.</div>
       </div>
     </div>
   </div>
@@ -136,9 +136,9 @@ body { margin: 0; background: #050506; }
   <!-- CTA -->
   <div data-screen-label="Призыв" style="border-top: 1px solid rgba(167,139,250,.1); background: radial-gradient(700px 400px at 50% 20%, rgba(124,92,252,.1), transparent 60%);">
     <div style="max-width: 800px; margin: 0 auto; padding: 100px 40px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 26px;">
-      <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(28px, 3.2vw, 46px); line-height: 1.15;">Один пропущенный клиент стоит дороже, чем весь тариф</div>
-      <div style="font-size: 17px; line-height: 1.7; color: #9B94AD; font-weight: 500;">Оставьте заявку — посчитаем, сколько клиентов вы теряете сейчас и что это стоит в деньгах.</div>
-      <a href="index.html#form" style="text-decoration: none; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); font-weight: 800; font-size: 15px; padding: 16px 36px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Оставить заявку</a>
+      <div data-en="One missed client costs more than the whole plan" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(28px, 3.2vw, 46px); line-height: 1.15;">Один пропущенный клиент стоит дороже, чем весь тариф</div>
+      <div data-en="Leave a request — we'll work out how many clients you're losing right now and what that costs you." style="font-size: 17px; line-height: 1.7; color: #9B94AD; font-weight: 500;">Оставьте заявку — посчитаем, сколько клиентов вы теряете сейчас и что это стоит в деньгах.</div>
+      <a href="index.html#form" data-en="Get a quote" style="text-decoration: none; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); font-weight: 800; font-size: 15px; padding: 16px 36px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Оставить заявку</a>
     </div>
   </div>
 
@@ -147,9 +147,9 @@ body { margin: 0; background: #050506; }
     <div style="max-width: 1240px; margin: 0 auto; padding: 40px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
       <img src="assets/logo-full.png" alt="Bloom Space Web" style="height: 28px;">
       <div style="display: flex; gap: 28px;">
-        <a href="index.html" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Главная</a>
-        <a href="uslugi.html" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Услуги</a>
-        <a href="index.html#form" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Заявка</a>
+        <a href="index.html" data-en="Home" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Главная</a>
+        <a href="uslugi.html" data-en="Services" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Услуги</a>
+        <a href="index.html#form" data-en="Request" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Заявка</a>
       </div>
       <div style="font-size: 13px; color: #9B94AD; font-weight: 600;">© 2026 Bloom Space Web</div>
     </div>

@@ -6,7 +6,7 @@
 <title>Услуги — Bloom Space Web</title>
 </head>
 <body>
-
+<script src="assets/geo.js"></script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -26,39 +26,39 @@ body { margin: 0; background: #050506; }
       <img src="assets/logo-full.png" alt="Bloom Space Web" style="height: 34px;">
     </a>
     <div style="display: flex; align-items: center; gap: 32px;">
-      <a href="index.html" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600;" style-hover="color: #F2F0F7;">Главная</a>
-      <a href="uslugi.html" style="color: #F2F0F7; text-decoration: none; font-size: 14px; font-weight: 700;">Услуги</a>
-      <a href="ceny.html" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600;" style-hover="color: #F2F0F7;">Цены</a>
-      <a href="index.html#form" style="color: #0B0714; text-decoration: none; font-size: 13px; font-weight: 800; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); padding: 10px 22px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Оставить заявку</a>
+      <a href="index.html" data-en="Home" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600;" style-hover="color: #F2F0F7;">Главная</a>
+      <a href="uslugi.html" data-en="Services" style="color: #F2F0F7; text-decoration: none; font-size: 14px; font-weight: 700;">Услуги</a>
+      <a href="ceny.html" data-en="Pricing" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600;" style-hover="color: #F2F0F7;">Цены</a>
+      <a href="index.html#form" data-en="Get a quote" style="color: #0B0714; text-decoration: none; font-size: 13px; font-weight: 800; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); padding: 10px 22px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Оставить заявку</a>
     </div>
   </div>
 
   <!-- HEADER -->
   <div data-screen-label="Заголовок" style="max-width: 1240px; margin: 0 auto; padding: 170px 40px 80px;">
-    <div style="font-size: 13px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: #A78BFA; margin-bottom: 18px;">Услуги</div>
-    <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(36px, 4.4vw, 64px); line-height: 1.1; max-width: 900px;">Всё, что нужно, чтобы клиент дошёл до записи</div>
-    <div style="font-size: 18px; line-height: 1.7; color: #9B94AD; font-weight: 500; max-width: 620px; margin-top: 24px;">Три услуги, которые закрывают всю цепочку: клиент нашёл вас → написал или позвонил → получил ответ → записался. На любом шаге, в любое время суток.</div>
+    <div data-en="Services" style="font-size: 13px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: #A78BFA; margin-bottom: 18px;">Услуги</div>
+    <div data-en="Everything needed to turn a client into a booking" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(36px, 4.4vw, 64px); line-height: 1.1; max-width: 900px;">Всё, что нужно, чтобы клиент дошёл до записи</div>
+    <div data-en="Three services that cover the whole chain: a client finds you → messages or calls → gets a reply → books. At any step, at any hour." style="font-size: 18px; line-height: 1.7; color: #9B94AD; font-weight: 500; max-width: 620px; margin-top: 24px;">Три услуги, которые закрывают всю цепочку: клиент нашёл вас → написал или позвонил → получил ответ → записался. На любом шаге, в любое время суток.</div>
   </div>
 
   <!-- ЗВОНКИ -->
   <div id="calls" data-screen-label="ИИ-звонки" style="border-top: 1px solid rgba(167,139,250,.1);">
     <div style="max-width: 1240px; margin: 0 auto; padding: 96px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
       <div style="display: flex; flex-direction: column; gap: 22px;">
-        <div style="font-family: Unbounded, sans-serif; font-size: 15px; font-weight: 700; color: #A78BFA;">01 — Телефон</div>
-        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(26px, 2.8vw, 40px); line-height: 1.18;">ИИ-администратор, который берёт трубку всегда</div>
-        <div style="font-size: 16.5px; line-height: 1.75; color: #9B94AD; font-weight: 500;">До 30% звонков в малом бизнесе остаются без ответа: вы с клиентом, за рулём, спите. Каждый такой звонок — клиент, который ушёл к конкуренту. ИИ-администратор отвечает с первого гудка живым голосом, консультирует по ценам, записывает в расписание и присылает вам отчёт о каждом разговоре.</div>
+        <div data-en="01 — Phone" style="font-family: Unbounded, sans-serif; font-size: 15px; font-weight: 700; color: #A78BFA;">01 — Телефон</div>
+        <div data-en="An AI receptionist that always picks up" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(26px, 2.8vw, 40px); line-height: 1.18;">ИИ-администратор, который берёт трубку всегда</div>
+        <div data-en="Up to 30% of calls to a small business go unanswered: you're with a client, driving, asleep. Every one of those calls is a client who went to a competitor. The AI receptionist answers from the first ring with a real voice, quotes prices, books the slot and sends you a report on every call." style="font-size: 16.5px; line-height: 1.75; color: #9B94AD; font-weight: 500;">До 30% звонков в малом бизнесе остаются без ответа: вы с клиентом, за рулём, спите. Каждый такой звонок — клиент, который ушёл к конкуренту. ИИ-администратор отвечает с первого гудка живым голосом, консультирует по ценам, записывает в расписание и присылает вам отчёт о каждом разговоре.</div>
         <div style="display: flex; flex-direction: column; gap: 12px;">
-          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Голос не «роботный»: клиенты дослушивают и записываются</span></div>
-          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Знает ваши услуги, цены и свободные окна</span></div>
-          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Запись и расшифровка каждого звонка — у вас в Telegram</span></div>
-          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Сложный вопрос — вежливо переводит на вас</span></div>
+          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span data-en="Doesn't sound &quot;robotic&quot;: clients stay on the line and book" style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Голос не «роботный»: клиенты дослушивают и записываются</span></div>
+          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span data-en="Knows your services, prices and open slots" style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Знает ваши услуги, цены и свободные окна</span></div>
+          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span data-en="Recording and transcript of every call — right in your Telegram" style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Запись и расшифровка каждого звонка — у вас в Telegram</span></div>
+          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span data-en="A tricky question gets politely transferred to you" style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Сложный вопрос — вежливо переводит на вас</span></div>
         </div>
       </div>
       <div style="display: flex; justify-content: center;">
         <div style="width: 380px; background: #0C0B12; border: 1px solid rgba(167,139,250,.18); border-radius: 28px; padding: 30px; display: flex; flex-direction: column; gap: 20px; box-shadow: 0 40px 100px rgba(124,92,252,.12);">
           <div style="display: flex; align-items: center; justify-content: space-between;">
-            <div style="font-size: 13px; font-weight: 700; color: #9B94AD;">Сегодня · 13 звонков</div>
-            <div style="font-size: 12px; font-weight: 800; color: #7DE3A8; background: rgba(125,227,168,.1); border: 1px solid rgba(125,227,168,.25); padding: 5px 12px; border-radius: 100px;">0 пропущено</div>
+            <div data-en="Today · 13 calls" style="font-size: 13px; font-weight: 700; color: #9B94AD;">Сегодня · 13 звонков</div>
+            <div data-en="0 missed" style="font-size: 12px; font-weight: 800; color: #7DE3A8; background: rgba(125,227,168,.1); border: 1px solid rgba(125,227,168,.25); padding: 5px 12px; border-radius: 100px;">0 пропущено</div>
           </div>
           <div style="display: flex; align-items: center; gap: 4px; height: 30px;">
             <div style="width: 5px; border-radius: 4px; background: #A78BFA; height: 100%; animation: bswWave 1s ease-in-out infinite;"></div>
@@ -70,19 +70,19 @@ body { margin: 0; background: #050506; }
           </div>
           <div style="display: flex; flex-direction: column; gap: 10px;">
             <div style="background: #13111B; border-radius: 14px; padding: 14px 16px; display: flex; justify-content: space-between; align-items: center;">
-              <div style="font-size: 14px; font-weight: 700;">08:02 — запись на маникюр</div>
+              <div data-en="08:02 — manicure booking" style="font-size: 14px; font-weight: 700;">08:02 — запись на маникюр</div>
               <div style="font-size: 12px; color: #7DE3A8; font-weight: 800;">✓</div>
             </div>
             <div style="background: #13111B; border-radius: 14px; padding: 14px 16px; display: flex; justify-content: space-between; align-items: center;">
-              <div style="font-size: 14px; font-weight: 700;">12:41 — консультация по ценам</div>
+              <div data-en="12:41 — pricing question" style="font-size: 14px; font-weight: 700;">12:41 — консультация по ценам</div>
               <div style="font-size: 12px; color: #7DE3A8; font-weight: 800;">✓</div>
             </div>
             <div style="background: #13111B; border-radius: 14px; padding: 14px 16px; display: flex; justify-content: space-between; align-items: center;">
-              <div style="font-size: 14px; font-weight: 700;">22:47 — запись на стрижку</div>
+              <div data-en="22:47 — haircut booking" style="font-size: 14px; font-weight: 700;">22:47 — запись на стрижку</div>
               <div style="font-size: 12px; color: #7DE3A8; font-weight: 800;">✓</div>
             </div>
           </div>
-          <div style="font-size: 12.5px; font-weight: 700; color: #9B94AD; text-align: center;">Последний звонок принят, когда вы уже спали</div>
+          <div data-en="The last call was picked up while you were already asleep" style="font-size: 12.5px; font-weight: 700; color: #9B94AD; text-align: center;">Последний звонок принят, когда вы уже спали</div>
         </div>
       </div>
     </div>
@@ -94,29 +94,29 @@ body { margin: 0; background: #050506; }
       <div style="display: flex; justify-content: center; order: 1;">
         <div style="width: 380px; background: #0C0B12; border: 1px solid rgba(167,139,250,.18); border-radius: 28px; padding: 26px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 40px 100px rgba(124,92,252,.12);">
           <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(167,139,250,.12); padding-bottom: 12px;">
-            <div style="font-weight: 800; font-size: 14px;">Все мессенджеры</div>
-            <div style="font-size: 12px; font-weight: 800; color: #7DE3A8;">ответ ~3 сек</div>
+            <div data-en="All messengers" style="font-weight: 800; font-size: 14px;">Все мессенджеры</div>
+            <div data-en="reply ~3 sec" style="font-size: 12px; font-weight: 800; color: #7DE3A8;">ответ ~3 сек</div>
           </div>
           <div style="display: flex; gap: 8px;">
             <div style="font-size: 12px; font-weight: 800; color: #C4B0FA; border: 1px solid rgba(167,139,250,.35); padding: 6px 14px; border-radius: 100px;">Instagram</div>
             <div style="font-size: 12px; font-weight: 800; color: #C4B0FA; border: 1px solid rgba(167,139,250,.35); padding: 6px 14px; border-radius: 100px;">Telegram</div>
             <div style="font-size: 12px; font-weight: 800; color: #C4B0FA; border: 1px solid rgba(167,139,250,.35); padding: 6px 14px; border-radius: 100px;">WhatsApp</div>
           </div>
-          <div style="align-self: flex-start; max-width: 84%; background: #17151F; border-radius: 18px 18px 18px 6px; padding: 12px 16px; font-size: 14px; line-height: 1.5;">А у вас есть окно в субботу утром? И сразу скажите цену на окрашивание</div>
-          <div style="align-self: flex-end; max-width: 84%; background: linear-gradient(135deg, rgba(167,139,250,.28), rgba(124,92,252,.22)); border: 1px solid rgba(167,139,250,.25); border-radius: 18px 18px 6px 18px; padding: 12px 16px; font-size: 14px; line-height: 1.5;">В субботу свободно 9:30 и 11:00. Окрашивание в один тон — от 80 BYN, сложное — от 140. Записать вас на консультацию к колористу?</div>
-          <div style="align-self: flex-start; max-width: 84%; background: #17151F; border-radius: 18px 18px 18px 6px; padding: 12px 16px; font-size: 14px; line-height: 1.5;">Да, на 9:30</div>
-          <div style="font-size: 12.5px; font-weight: 700; color: #9B94AD; text-align: center; padding-top: 6px;">Диалог реальный по формату — ИИ сам довёл до записи</div>
+          <div data-en="Do you have an opening Saturday morning? And what's the price for coloring?" style="align-self: flex-start; max-width: 84%; background: #17151F; border-radius: 18px 18px 18px 6px; padding: 12px 16px; font-size: 14px; line-height: 1.5;">А у вас есть окно в субботу утром? И сразу скажите цену на окрашивание</div>
+          <div data-en="Saturday 9:30 and 11:00 are open. Single-tone coloring from 80 BYN, complex from 140. Want me to book you a consult with our colorist?" style="align-self: flex-end; max-width: 84%; background: linear-gradient(135deg, rgba(167,139,250,.28), rgba(124,92,252,.22)); border: 1px solid rgba(167,139,250,.25); border-radius: 18px 18px 6px 18px; padding: 12px 16px; font-size: 14px; line-height: 1.5;">В субботу свободно 9:30 и 11:00. Окрашивание в один тон — от 80 BYN, сложное — от 140. Записать вас на консультацию к колористу?</div>
+          <div data-en="Yes, 9:30 please" style="align-self: flex-start; max-width: 84%; background: #17151F; border-radius: 18px 18px 18px 6px; padding: 12px 16px; font-size: 14px; line-height: 1.5;">Да, на 9:30</div>
+          <div data-en="A real-format dialogue — the AI closed the booking on its own" style="font-size: 12.5px; font-weight: 700; color: #9B94AD; text-align: center; padding-top: 6px;">Диалог реальный по формату — ИИ сам довёл до записи</div>
         </div>
       </div>
       <div style="display: flex; flex-direction: column; gap: 22px; order: 2;">
-        <div style="font-family: Unbounded, sans-serif; font-size: 15px; font-weight: 700; color: #A78BFA;">02 — Переписки</div>
-        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(26px, 2.8vw, 40px); line-height: 1.18;">Отвечает в директе быстрее, чем клиент передумает</div>
-        <div style="font-size: 16.5px; line-height: 1.75; color: #9B94AD; font-weight: 500;">Клиент, который написал вечером и не получил ответ до утра, — это не «ответим завтра». Это клиент, который уже записался к другим. ИИ ведёт переписку в Instagram, Telegram и WhatsApp: консультирует, называет цены, предлагает свободные окна и доводит до записи.</div>
+        <div data-en="02 — Chats" style="font-family: Unbounded, sans-serif; font-size: 15px; font-weight: 700; color: #A78BFA;">02 — Переписки</div>
+        <div data-en="Replies in DMs faster than a client can change their mind" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(26px, 2.8vw, 40px); line-height: 1.18;">Отвечает в директе быстрее, чем клиент передумает</div>
+        <div data-en="A client who messages in the evening and gets no reply until morning isn't a &quot;we'll answer tomorrow&quot; situation. It's a client who's already booked with someone else. The AI handles chats on Instagram, Telegram and WhatsApp: advises, quotes prices, offers open slots and closes the booking." style="font-size: 16.5px; line-height: 1.75; color: #9B94AD; font-weight: 500;">Клиент, который написал вечером и не получил ответ до утра, — это не «ответим завтра». Это клиент, который уже записался к другим. ИИ ведёт переписку в Instagram, Telegram и WhatsApp: консультирует, называет цены, предлагает свободные окна и доводит до записи.</div>
         <div style="display: flex; flex-direction: column; gap: 12px;">
-          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Понимает живые сообщения, а не только кнопки меню</span></div>
-          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Пишет в вашем стиле — клиенты не отличают от вас</span></div>
-          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Не бросает диалог: напоминает, уточняет, дожимает</span></div>
-          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Вся история переписок и записей — в одном отчёте</span></div>
+          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span data-en="Understands natural messages, not just menu buttons" style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Понимает живые сообщения, а не только кнопки меню</span></div>
+          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span data-en="Writes in your tone — clients can't tell it's not you" style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Пишет в вашем стиле — клиенты не отличают от вас</span></div>
+          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span data-en="Doesn't drop the conversation: follows up, clarifies, closes" style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Не бросает диалог: напоминает, уточняет, дожимает</span></div>
+          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span data-en="The full chat and booking history — in one report" style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Вся история переписок и записей — в одном отчёте</span></div>
         </div>
       </div>
     </div>
@@ -126,14 +126,14 @@ body { margin: 0; background: #050506; }
   <div id="sites" data-screen-label="Сайты" style="border-top: 1px solid rgba(167,139,250,.1);">
     <div style="max-width: 1240px; margin: 0 auto; padding: 96px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
       <div style="display: flex; flex-direction: column; gap: 22px;">
-        <div style="font-family: Unbounded, sans-serif; font-size: 15px; font-weight: 700; color: #A78BFA;">03 — Сайты</div>
-        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(26px, 2.8vw, 40px); line-height: 1.18;">Лендинги и сайты, которые приводят заявки</div>
-        <div style="font-size: 16.5px; line-height: 1.75; color: #9B94AD; font-weight: 500;">Сайт — это не «чтобы был». Это продавец, который работает круглосуточно. Я собираю лендинги под одну задачу и многостраничные сайты под весь бизнес: структура, тексты, дизайн и форма заявки — всё заточено на то, чтобы посетитель оставил контакт.</div>
+        <div data-en="03 — Websites" style="font-family: Unbounded, sans-serif; font-size: 15px; font-weight: 700; color: #A78BFA;">03 — Сайты</div>
+        <div data-en="Landing pages and websites that bring in leads" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(26px, 2.8vw, 40px); line-height: 1.18;">Лендинги и сайты, которые приводят заявки</div>
+        <div data-en="A website isn't just &quot;for show&quot;. It's a salesperson that works around the clock. I build landing pages for a single goal and multi-page sites for the whole business: structure, copy, design and the request form — all built to get the visitor to leave their contact." style="font-size: 16.5px; line-height: 1.75; color: #9B94AD; font-weight: 500;">Сайт — это не «чтобы был». Это продавец, который работает круглосуточно. Я собираю лендинги под одну задачу и многостраничные сайты под весь бизнес: структура, тексты, дизайн и форма заявки — всё заточено на то, чтобы посетитель оставил контакт.</div>
         <div style="display: flex; flex-direction: column; gap: 12px;">
-          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Дизайн под ваш бренд, а не шаблон с чужими картинками</span></div>
-          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Продающие тексты — пишу сам, вам не нужно «прислать текстик»</span></div>
-          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Быстрая загрузка, корректно на телефоне, готов к рекламе</span></div>
-          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Связка «сайт + ИИ»: заявка с сайта сразу попадает к ИИ-администратору</span></div>
+          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span data-en="Design built for your brand, not a template with someone else's photos" style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Дизайн под ваш бренд, а не шаблон с чужими картинками</span></div>
+          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span data-en="Selling copy — written by me, you don't need to &quot;send some text&quot;" style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Продающие тексты — пишу сам, вам не нужно «прислать текстик»</span></div>
+          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span data-en="Fast loading, works properly on mobile, ready for ads" style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Быстрая загрузка, корректно на телефоне, готов к рекламе</span></div>
+          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: #A78BFA; font-weight: 800;">—</span><span data-en="&quot;Website + AI&quot; bundle: leads from the site go straight to the AI receptionist" style="font-size: 15.5px; line-height: 1.6; color: #D8D3E6; font-weight: 600;">Связка «сайт + ИИ»: заявка с сайта сразу попадает к ИИ-администратору</span></div>
         </div>
       </div>
       <div style="display: flex; justify-content: center;">
@@ -145,18 +145,18 @@ body { margin: 0; background: #050506; }
             <div style="flex: 1; margin-left: 10px; background: #17151F; border-radius: 6px; padding: 5px 12px; font-size: 11px; color: #9B94AD; font-weight: 600;">ваш-бизнес.by</div>
           </div>
           <div style="padding: 28px; display: flex; flex-direction: column; gap: 16px;">
-            <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 22px; line-height: 1.3;">Заголовок, который цепляет за проблему</div>
+            <div data-en="A headline that hooks the problem" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 22px; line-height: 1.3;">Заголовок, который цепляет за проблему</div>
             <div style="height: 8px; width: 76%; border-radius: 4px; background: #17151F;"></div>
             <div style="height: 8px; width: 58%; border-radius: 4px; background: #17151F;"></div>
             <div style="display: flex; gap: 10px;">
-              <div style="font-size: 12px; font-weight: 800; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); padding: 10px 20px; border-radius: 100px;">Оставить заявку</div>
-              <div style="font-size: 12px; font-weight: 800; color: #C4B0FA; border: 1px solid rgba(167,139,250,.35); padding: 10px 20px; border-radius: 100px;">Цены</div>
+              <div data-en="Get a quote" style="font-size: 12px; font-weight: 800; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); padding: 10px 20px; border-radius: 100px;">Оставить заявку</div>
+              <div data-en="Pricing" style="font-size: 12px; font-weight: 800; color: #C4B0FA; border: 1px solid rgba(167,139,250,.35); padding: 10px 20px; border-radius: 100px;">Цены</div>
             </div>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px;">
               <div style="height: 64px; border-radius: 12px; background: linear-gradient(160deg, rgba(167,139,250,.2), rgba(124,92,252,.07)); border: 1px solid rgba(167,139,250,.16);"></div>
               <div style="height: 64px; border-radius: 12px; background: linear-gradient(160deg, rgba(167,139,250,.2), rgba(124,92,252,.07)); border: 1px solid rgba(167,139,250,.16);"></div>
             </div>
-            <div style="font-size: 12.5px; font-weight: 700; color: #9B94AD; text-align: center;">Каждый блок отвечает на вопрос клиента</div>
+            <div data-en="Every block answers a question the client has" style="font-size: 12.5px; font-weight: 700; color: #9B94AD; text-align: center;">Каждый блок отвечает на вопрос клиента</div>
           </div>
         </div>
       </div>
@@ -166,11 +166,11 @@ body { margin: 0; background: #050506; }
   <!-- CTA -->
   <div data-screen-label="Призыв" style="border-top: 1px solid rgba(167,139,250,.1); background: radial-gradient(700px 400px at 50% 20%, rgba(124,92,252,.1), transparent 60%);">
     <div style="max-width: 800px; margin: 0 auto; padding: 100px 40px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 26px;">
-      <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(28px, 3.2vw, 46px); line-height: 1.15;">Не уверены, что вам нужно?</div>
-      <div style="font-size: 17px; line-height: 1.7; color: #9B94AD; font-weight: 500;">Оставьте заявку — за 15 минут разберём вашу ситуацию, и я честно скажу, что даст результат именно вам.</div>
+      <div data-en="Not sure what you need?" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(28px, 3.2vw, 46px); line-height: 1.15;">Не уверены, что вам нужно?</div>
+      <div data-en="Leave a request — in 15 minutes we'll go through your situation, and I'll tell you honestly what will actually work for you." style="font-size: 17px; line-height: 1.7; color: #9B94AD; font-weight: 500;">Оставьте заявку — за 15 минут разберём вашу ситуацию, и я честно скажу, что даст результат именно вам.</div>
       <div style="display: flex; gap: 14px;">
-        <a href="index.html#form" style="text-decoration: none; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); font-weight: 800; font-size: 15px; padding: 16px 32px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Оставить заявку</a>
-        <a href="ceny.html" style="text-decoration: none; color: #F2F0F7; border: 1px solid rgba(167,139,250,.3); font-weight: 700; font-size: 15px; padding: 15px 30px; border-radius: 100px;" style-hover="border-color: rgba(167,139,250,.7);">Смотреть цены</a>
+        <a href="index.html#form" data-en="Get a quote" style="text-decoration: none; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); font-weight: 800; font-size: 15px; padding: 16px 32px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Оставить заявку</a>
+        <a href="ceny.html" data-en="See pricing" style="text-decoration: none; color: #F2F0F7; border: 1px solid rgba(167,139,250,.3); font-weight: 700; font-size: 15px; padding: 15px 30px; border-radius: 100px;" style-hover="border-color: rgba(167,139,250,.7);">Смотреть цены</a>
       </div>
     </div>
   </div>
@@ -180,9 +180,9 @@ body { margin: 0; background: #050506; }
     <div style="max-width: 1240px; margin: 0 auto; padding: 40px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
       <img src="assets/logo-full.png" alt="Bloom Space Web" style="height: 28px;">
       <div style="display: flex; gap: 28px;">
-        <a href="index.html" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Главная</a>
-        <a href="ceny.html" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Цены</a>
-        <a href="index.html#form" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Заявка</a>
+        <a href="index.html" data-en="Home" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Главная</a>
+        <a href="ceny.html" data-en="Pricing" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Цены</a>
+        <a href="index.html#form" data-en="Request" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Заявка</a>
       </div>
       <div style="font-size: 13px; color: #9B94AD; font-weight: 600;">© 2026 Bloom Space Web</div>
     </div>
