@@ -298,9 +298,13 @@ new IntersectionObserver(function(entries){
 var fWay = document.getElementById('fWay');
 var fContact = document.getElementById('fContact');
 var privacyHint = document.getElementById('privacyHint');
-var PLACEHOLDERS = { 'Telegram': '@ник или номер', 'Instagram': '@ник', 'Телефон': 'Номер телефона', 'WhatsApp': 'Номер телефона' };
+var PLACEHOLDERS = {
+  ru: { 'Telegram': '@ник или номер', 'Instagram': '@ник', 'Телефон': 'Номер телефона', 'WhatsApp': 'Номер телефона' },
+  en: { 'Telegram': '@handle or number', 'Instagram': '@handle', 'Телефон': 'Phone number', 'WhatsApp': 'Phone number' }
+};
 fWay.addEventListener('change', function(){
-  fContact.placeholder = PLACEHOLDERS[fWay.value];
+  var lang = document.documentElement.lang === 'en' ? 'en' : 'ru';
+  fContact.placeholder = PLACEHOLDERS[lang][fWay.value];
   privacyHint.style.display = (fWay.value === 'Instagram' || fWay.value === 'Telegram') ? 'block' : 'none';
 });
 document.getElementById('fSubmit').addEventListener('click', function(){
