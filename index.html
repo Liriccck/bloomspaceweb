@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bloom Space Web — ИИ-администраторы и сайты</title>
+<meta name="description" content="ИИ-администраторы, которые отвечают на звонки и сообщения 24/7, и сайты, которые приводят заявки. Bloom Space Web.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #050506; }
+@keyframes bswFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+::selection { background: rgba(167,139,250,.35); }
+a { color: #C4B0FA; }
+</style>
+</head>
+<body>
+
+<div style="font-family: Manrope, sans-serif; background-color: #050506; background-image: radial-gradient(900px 600px at 85% 12%, rgba(124,92,252,.07), transparent 60%), radial-gradient(800px 550px at 8% 55%, rgba(167,139,250,.05), transparent 60%), radial-gradient(1000px 650px at 90% 92%, rgba(124,92,252,.06), transparent 60%), url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cg fill='%23C4B0FA'%3E%3Ccircle cx='18' cy='32' r='1' opacity='.16'/%3E%3Ccircle cx='84' cy='9' r='.8' opacity='.12'/%3E%3Ccircle cx='150' cy='51' r='1' opacity='.14'/%3E%3Ccircle cx='203' cy='96' r='.8' opacity='.1'/%3E%3Ccircle cx='55' cy='118' r='1' opacity='.15'/%3E%3Ccircle cx='121' cy='160' r='.8' opacity='.11'/%3E%3Ccircle cx='180' cy='196' r='1' opacity='.13'/%3E%3Ccircle cx='30' cy='201' r='.8' opacity='.1'/%3E%3Ccircle cx='108' cy='78' r='.7' opacity='.09'/%3E%3C/g%3E%3C/svg%3E&quot;); background-attachment: fixed; color: #F2F0F7; min-height: 100vh;">
+
+  <!-- NAV -->
+  <div style="position: fixed; top: 0; left: 0; right: 0; z-index: 90; display: flex; align-items: center; justify-content: space-between; padding: 12px 36px; background: rgba(5,5,6,.88); border-bottom: 1px solid rgba(167,139,250,.12);">
+    <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+      <img src="assets/logo-full.png" alt="Bloom Space Web" style="height: 34px;">
+    </a>
+    <div style="display: flex; align-items: center; gap: 32px;">
+      <a href="index.html" style="color: #F2F0F7; text-decoration: none; font-size: 14px; font-weight: 700;">Главная</a>
+      <a href="uslugi.html" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600;" style-hover="color: #F2F0F7;">Услуги</a>
+      <a href="ceny.html" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600;" style-hover="color: #F2F0F7;">Цены</a>
+      <a href="#form" style="color: #0B0714; text-decoration: none; font-size: 13px; font-weight: 800; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); padding: 10px 22px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Оставить заявку</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div style="position: relative; min-height: 92vh; display: flex; align-items: center; overflow: hidden;">
+    <video id="heroVideo" muted playsinline autoplay loop preload="auto" src="assets/hero-full.webm" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; transform: translateZ(0);"></video>
+    <div style="position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 150px 40px 100px; width: 100%;">
+      <div style="display: flex; flex-direction: column; gap: 26px; max-width: 620px;">
+        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(40px, 4.6vw, 72px); line-height: 1.06; letter-spacing: -0.01em;">
+          Ваш бизнес сам<br>
+          <span style="background: linear-gradient(100deg, #E8E2FA 10%, #A78BFA 55%, #7C5CFC 90%); -webkit-background-clip: text; background-clip: text; color: transparent;">берёт трубку</span>
+        </div>
+        <div style="font-size: 18px; line-height: 1.65; color: #C7C1D6; max-width: 480px; font-weight: 500;">
+          ИИ-администраторы и сайты, которые не пропускают ни одного клиента. Пока конкуренты перезванивают «в течение дня», ваши клиенты уже записаны.
+        </div>
+        <div style="display: flex; gap: 14px; align-items: center;">
+          <a href="#form" style="text-decoration: none; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); font-weight: 800; font-size: 15px; padding: 16px 32px; border-radius: 100px;" style-hover="filter: brightness(1.12); transform: translateY(-1px);">Хочу так же</a>
+          <a href="ceny.html" style="text-decoration: none; color: #F2F0F7; border: 1px solid rgba(167,139,250,.3); font-weight: 700; font-size: 15px; padding: 15px 30px; border-radius: 100px; background: rgba(5,5,6,.45);" style-hover="border-color: rgba(167,139,250,.7);">Смотреть цены</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- УСЛУГИ -->
+  <div style="max-width: 1240px; margin: 0 auto; padding: 110px 40px;">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 48px;">
+      <div>
+        <div style="font-size: 13px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: #A78BFA; margin-bottom: 16px;">Чем я занимаюсь</div>
+        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 48px); line-height: 1.15;">Три инструмента, которые<br>работают вместо вас</div>
+      </div>
+      <a href="uslugi.html" style="text-decoration: none; color: #C4B0FA; font-weight: 800; font-size: 15px; white-space: nowrap; border-bottom: 1px solid rgba(167,139,250,.4); padding-bottom: 3px;" style-hover="color: #F2F0F7;">Подробнее об услугах →</a>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+      <a href="uslugi.html#calls" style="text-decoration: none; color: inherit; background: #0C0B12; border: 1px solid rgba(167,139,250,.14); border-radius: 24px; padding: 34px 30px; display: flex; flex-direction: column; gap: 16px; transition: border-color .3s, transform .3s;" style-hover="border-color: rgba(167,139,250,.5); transform: translateY(-4px);">
+        <div style="font-family: Unbounded, sans-serif; font-size: 26px; font-weight: 700; color: #A78BFA;">01</div>
+        <div style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 20px; line-height: 1.3;">ИИ-администратор на телефоне</div>
+        <div style="font-size: 15px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Берёт трубку с первого гудка, отвечает голосом, записывает клиента и присылает вам отчёт. Ни одного пропущенного звонка — ни в обед, ни ночью.</div>
+        <div style="margin-top: auto; color: #C4B0FA; font-weight: 800; font-size: 14px;">Как это звучит →</div>
+      </a>
+      <a href="uslugi.html#chats" style="text-decoration: none; color: inherit; background: #0C0B12; border: 1px solid rgba(167,139,250,.14); border-radius: 24px; padding: 34px 30px; display: flex; flex-direction: column; gap: 16px; transition: border-color .3s, transform .3s;" style-hover="border-color: rgba(167,139,250,.5); transform: translateY(-4px);">
+        <div style="font-family: Unbounded, sans-serif; font-size: 26px; font-weight: 700; color: #A78BFA;">02</div>
+        <div style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 20px; line-height: 1.3;">ИИ-администратор в переписках</div>
+        <div style="font-size: 15px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Instagram, Telegram, WhatsApp — отвечает мгновенно, знает ваши цены и свободные окна, дожимает до записи. Клиент даже не поймёт, что это не вы.</div>
+        <div style="margin-top: auto; color: #C4B0FA; font-weight: 800; font-size: 14px;">Посмотреть диалог →</div>
+      </a>
+      <a href="uslugi.html#sites" style="text-decoration: none; color: inherit; background: #0C0B12; border: 1px solid rgba(167,139,250,.14); border-radius: 24px; padding: 34px 30px; display: flex; flex-direction: column; gap: 16px; transition: border-color .3s, transform .3s;" style-hover="border-color: rgba(167,139,250,.5); transform: translateY(-4px);">
+        <div style="font-family: Unbounded, sans-serif; font-size: 26px; font-weight: 700; color: #A78BFA;">03</div>
+        <div style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 20px; line-height: 1.3;">Лендинги и сайты</div>
+        <div style="font-size: 15px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Не «визитка для галочки», а страница, собранная под одну задачу: превращать посетителей в заявки. От лендинга до многостраничника.</div>
+        <div style="margin-top: auto; color: #C4B0FA; font-weight: 800; font-size: 14px;">Что входит →</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ДЕМО -->
+  <div id="demoSection" style="border-top: 1px solid rgba(167,139,250,.1); border-bottom: 1px solid rgba(167,139,250,.1); background: radial-gradient(800px 500px at 30% 20%, rgba(124,92,252,.08), transparent 60%);">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 110px 40px;">
+      <div style="text-align: center; margin-bottom: 56px;">
+        <div style="font-size: 13px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: #A78BFA; margin-bottom: 16px;">Живое демо</div>
+        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 48px); line-height: 1.15;">Вот как это выглядит<br>у ваших клиентов</div>
+      </div>
+      <div style="display: flex; justify-content: center;">
+        <div style="width: 100%; max-width: 560px; background: #0C0B12; border: 1px solid rgba(167,139,250,.16); border-radius: 26px; padding: 32px; display: flex; flex-direction: column; gap: 18px; min-height: 480px;">
+          <div id="chatBox" style="display: flex; flex-direction: column; gap: 12px;"></div>
+          <div style="margin-top: auto; font-size: 13px; font-weight: 700; color: #9B94AD; text-align: center; padding-top: 12px; border-top: 1px solid rgba(167,139,250,.1);">Это не скрипт с кнопками. ИИ понимает живой язык и ваши услуги.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- КАК ЭТО РАБОТАЕТ -->
+  <div style="max-width: 1240px; margin: 0 auto; padding: 110px 40px;">
+    <div style="font-size: 13px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: #A78BFA; margin-bottom: 16px;">Как это работает</div>
+    <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 48px); line-height: 1.15; margin-bottom: 48px;">От заявки до запуска —<br>меньше недели</div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px;">
+      <div style="border-top: 2px solid rgba(167,139,250,.4); padding-top: 22px; display: flex; flex-direction: column; gap: 12px;">
+        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 15px; color: #A78BFA;">Шаг 1</div>
+        <div style="font-weight: 800; font-size: 18px;">Знакомство с проектом</div>
+        <div style="font-size: 14.5px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Узнаём ваши задачи, услуги и процессы. После этого предлагаем решение, которое действительно подходит вашему бизнесу.</div>
+      </div>
+      <div style="border-top: 2px solid rgba(167,139,250,.4); padding-top: 22px; display: flex; flex-direction: column; gap: 12px;">
+        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 15px; color: #A78BFA;">Шаг 2</div>
+        <div style="font-weight: 800; font-size: 18px;">Настройка под вас</div>
+        <div style="font-size: 14.5px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Загружаю ваши услуги, цены, расписание и манеру общения. ИИ говорит так, как говорили бы вы.</div>
+      </div>
+      <div style="border-top: 2px solid rgba(167,139,250,.4); padding-top: 22px; display: flex; flex-direction: column; gap: 12px;">
+        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 15px; color: #A78BFA;">Шаг 3</div>
+        <div style="font-weight: 800; font-size: 18px;">Тест на реальных клиентах</div>
+        <div style="font-size: 14.5px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Вы слушаете записи звонков и читаете переписки. Правим формулировки, пока не будет идеально.</div>
+      </div>
+      <div style="border-top: 2px solid rgba(167,139,250,.4); padding-top: 22px; display: flex; flex-direction: column; gap: 12px;">
+        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 15px; color: #A78BFA;">Шаг 4</div>
+        <div style="font-weight: 800; font-size: 18px;">Запуск</div>
+        <div style="font-size: 14.5px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Клиенты получают ответ мгновенно, вы — уведомление о каждой записи. И спокойно работаете.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ЦЕНЫ ТИЗЕР -->
+  <div style="border-top: 1px solid rgba(167,139,250,.1);">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 110px 40px;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 48px;">
+        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 48px); line-height: 1.15;">Цены без «оставьте<br>заявку и узнаете»</div>
+        <a href="ceny.html" style="text-decoration: none; color: #C4B0FA; font-weight: 800; font-size: 15px; white-space: nowrap; border-bottom: 1px solid rgba(167,139,250,.4); padding-bottom: 3px;" style-hover="color: #F2F0F7;">Все тарифы →</a>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+        <div style="background: #0C0B12; border: 1px solid rgba(167,139,250,.14); border-radius: 20px; padding: 24px 22px; display: flex; flex-direction: column; gap: 6px;">
+          <div style="font-weight: 800; font-size: 14px; color: #9B94AD;">ИИ-администратор</div>
+          <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 28px;">200 <span style="font-size: 15px; color: #9B94AD;">BYN</span></div>
+          <div style="font-size: 12.5px; color: #9B94AD; font-weight: 600;">+ 100 BYN/мес подписка обязательна</div>
+        </div>
+        <div style="background: #0C0B12; border: 1px solid rgba(167,139,250,.14); border-radius: 20px; padding: 24px 22px; display: flex; flex-direction: column; gap: 6px;">
+          <div style="font-weight: 800; font-size: 14px; color: #9B94AD;">Лендинг</div>
+          <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 28px;">200 <span style="font-size: 15px; color: #9B94AD;">BYN</span></div>
+        </div>
+        <div style="background: #0C0B12; border: 1px solid rgba(167,139,250,.14); border-radius: 20px; padding: 24px 22px; display: flex; flex-direction: column; gap: 6px;">
+          <div style="font-weight: 800; font-size: 14px; color: #9B94AD;">Многостраничный сайт</div>
+          <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 28px;">450 <span style="font-size: 15px; color: #9B94AD;">BYN</span></div>
+        </div>
+      </div>
+      <div style="background: linear-gradient(160deg, rgba(167,139,250,.16), rgba(124,92,252,.06)); border: 1px solid rgba(167,139,250,.4); border-radius: 24px; padding: 30px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; position: relative;">
+        <div style="position: absolute; top: -12px; left: 32px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); padding: 6px 14px; border-radius: 100px;">Горячее предложение</div>
+        <div>
+          <div style="font-weight: 800; font-size: 16px; color: #C4B0FA; margin-bottom: 6px;">Лендинг + ИИ-администратор</div>
+          <div style="font-size: 14px; color: #9B94AD; font-weight: 600;">Сайт продаёт — ИИ дожимает до записи</div>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 20px;">
+          <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 34px;">350 <span style="font-size: 18px; color: #9B94AD;">BYN</span></div>
+          <a href="ceny.html" style="text-decoration: none; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); font-weight: 800; font-size: 14px; padding: 12px 24px; border-radius: 100px; white-space: nowrap;" style-hover="filter: brightness(1.12);">Все связки →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- О СЕБЕ -->
+  <div style="border-top: 1px solid rgba(167,139,250,.1);">
+    <div style="max-width: 900px; margin: 0 auto; padding: 110px 40px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 26px;">
+      <img src="assets/logo-mark.png" alt="Bloom Space Web" style="width: 96px; animation: bswFloat 4s ease-in-out infinite;">
+      <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(26px, 2.8vw, 40px); line-height: 1.2;">Не агентство. Один человек,<br>который отвечает за результат</div>
+      <div style="font-size: 17px; line-height: 1.75; color: #9B94AD; font-weight: 500; max-width: 640px;">Bloom Space Web — это я. Вы пишете мне напрямую, я сам собираю ваш проект и сам его поддерживаю. Никаких менеджеров, «передам разработчику» и недельных согласований. Поэтому запуск занимает дни, а не месяцы — и стоит как у фрилансера, а работает как у студии.</div>
+    </div>
+  </div>
+
+  <!-- ФОРМА -->
+  <div id="form" style="border-top: 1px solid rgba(167,139,250,.1); background: radial-gradient(800px 500px at 70% 30%, rgba(124,92,252,.1), transparent 60%);">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 110px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+      <div style="display: flex; flex-direction: column; gap: 22px;">
+        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 50px); line-height: 1.12;">Сколько клиентов вы потеряли, пока читали эту страницу?</div>
+        <div style="font-size: 17px; line-height: 1.7; color: #9B94AD; font-weight: 500;">Оставьте заявку — за 15 минут разберём вашу ситуацию, и я скажу честно, что вам нужно, а что нет. Без впаривания.</div>
+      </div>
+      <div id="formCard" style="background: #0C0B12; border: 1px solid rgba(167,139,250,.2); border-radius: 26px; padding: 40px; display: flex; flex-direction: column; gap: 18px;">
+        <input id="fName" maxlength="80" placeholder="Как вас зовут" style="background: #13111B; border: 1px solid rgba(167,139,250,.16); border-radius: 14px; padding: 16px 18px; font-size: 15px; color: #F2F0F7; font-family: Manrope, sans-serif; font-weight: 600; outline: none;" style-focus="border-color: rgba(167,139,250,.6);">
+        <div style="display: grid; grid-template-columns: 150px 1fr; gap: 10px;">
+          <select id="fWay" style="cursor: pointer; background-color: #13111B; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%23C4B0FA' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E&quot;); background-repeat: no-repeat; background-position: right 14px center; border: 1px solid rgba(167,139,250,.16); border-radius: 14px; padding: 16px 34px 16px 14px; font-size: 15px; color: #F2F0F7; font-family: Manrope, sans-serif; font-weight: 600; outline: none; appearance: none;">
+            <option value="Telegram">Telegram</option>
+            <option value="Instagram">Instagram</option>
+            <option value="Телефон">Телефон</option>
+            <option value="WhatsApp">WhatsApp</option>
+          </select>
+          <input id="fContact" maxlength="120" placeholder="@ник или номер" style="background: #13111B; border: 1px solid rgba(167,139,250,.16); border-radius: 14px; padding: 16px 18px; font-size: 15px; color: #F2F0F7; font-family: Manrope, sans-serif; font-weight: 600; outline: none;" style-focus="border-color: rgba(167,139,250,.6);">
+        </div>
+        <div id="privacyHint" style="font-size: 12.5px; color: #9B94AD; font-weight: 600; line-height: 1.5; margin-top: -8px;">Проверьте, что профиль открыт и принимает сообщения — иначе я не смогу вам написать</div>
+        <input id="fCompany" tabindex="-1" autocomplete="off" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0;" aria-hidden="true">
+        <select id="fNeed" style="cursor: pointer; background-color: #13111B; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%23C4B0FA' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E&quot;); background-repeat: no-repeat; background-position: right 18px center; border: 1px solid rgba(167,139,250,.16); border-radius: 14px; padding: 16px 40px 16px 18px; font-size: 15px; color: #F2F0F7; font-family: Manrope, sans-serif; font-weight: 600; outline: none; appearance: none;">
+          <option value="ИИ-администратор">Нужен ИИ-администратор</option>
+          <option value="Сайт">Нужен сайт или лендинг</option>
+          <option value="Сайт + ИИ">Сайт + ИИ-администратор</option>
+          <option value="Не знаю">Пока не знаю — разберитесь со мной</option>
+        </select>
+        <button id="fSubmit" style="cursor: pointer; border: none; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); color: #0B0714; font-family: Manrope, sans-serif; font-weight: 800; font-size: 16px; padding: 17px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Получить план и цену</button>
+        <div style="font-size: 12.5px; color: #9B94AD; font-weight: 600; text-align: center;">Отвечаю лично, обычно в течение пары часов</div>
+        <div style="font-size: 12px; color: #6E6880; font-weight: 500; text-align: center; line-height: 1.5;">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html" style="color: #9B94AD;" style-hover="color: #C4B0FA;">политикой конфиденциальности</a></div>
+      </div>
+      <div id="sentCard" style="display: none; background: #0C0B12; border: 1px solid rgba(125,227,168,.35); border-radius: 26px; padding: 48px 40px; flex-direction: column; gap: 16px; align-items: center; text-align: center;">
+        <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(125,227,168,.12); border: 1px solid rgba(125,227,168,.4); display: flex; align-items: center; justify-content: center; color: #7DE3A8; font-size: 24px; font-weight: 800;">✓</div>
+        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 22px;">Заявка у меня</div>
+        <div style="font-size: 15px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Напишу вам в ближайшие пару часов. Если срочно — <a href="mailto:bloomspaceweb555@gmail.com" style="color: #C4B0FA;">bloomspaceweb555@gmail.com</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="border-top: 1px solid rgba(167,139,250,.1);">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 40px; display: flex; flex-direction: column; gap: 28px;">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+        <img src="assets/logo-full.png" alt="Bloom Space Web" style="height: 28px;">
+        <div style="display: flex; gap: 28px;">
+          <a href="uslugi.html" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Услуги</a>
+          <a href="ceny.html" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Цены</a>
+          <a href="#form" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Заявка</a>
+          <a href="privacy.html" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Политика конфиденциальности</a>
+        </div>
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <a href="https://www.instagram.com/bloomspaceweb?igsh=MXhvbXh2OG9zN2hxcQ%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(167,139,250,.25); color: #C4B0FA;" style-hover="border-color: rgba(167,139,250,.7); color: #F2F0F7;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="mailto:bloomspaceweb555@gmail.com" aria-label="Email" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(167,139,250,.25); color: #C4B0FA;" style-hover="border-color: rgba(167,139,250,.7); color: #F2F0F7;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"></rect><path d="m22 7-10 6L2 7"></path></svg>
+          </a>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; border-top: 1px solid rgba(167,139,250,.08); padding-top: 22px;">
+        <div style="font-size: 13px; color: #6E6880; font-weight: 600;">© 2026 Bloom Space Web</div>
+        <div style="font-size: 12.5px; color: #6E6880; font-weight: 500;">bloomspaceweb555@gmail.com</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// hover / focus стили из атрибутов style-hover / style-focus
+document.querySelectorAll('[style-hover]').forEach(function(el){
+  var base = el.getAttribute('style') || '';
+  var hov = el.getAttribute('style-hover');
+  el.addEventListener('mouseenter', function(){ el.style.cssText = base + ';' + hov; });
+  el.addEventListener('mouseleave', function(){ el.style.cssText = base; });
+});
+document.querySelectorAll('[style-focus]').forEach(function(el){
+  var base = el.getAttribute('style') || '';
+  var foc = el.getAttribute('style-focus');
+  el.addEventListener('focus', function(){ el.style.cssText = base + ';' + foc; });
+  el.addEventListener('blur', function(){ el.style.cssText = base; });
+});
+
+// hero-видео: возобновляем, если браузер поставил на паузу
+var heroV = document.getElementById('heroVideo');
+setInterval(function(){
+  if (document.visibilityState === 'visible' && heroV.paused) { heroV.muted = true; heroV.play().catch(function(){}); }
+}, 1500);
+
+// чат-демо
+var CHAT = [
+  { me: false, text: 'Добрый вечер! А завтра есть свободное время на стрижку?' },
+  { me: true, text: 'Добрый вечер! Завтра свободно 12:30 и 18:00. Стрижка — 35 BYN. Какое время удобнее?' },
+  { me: false, text: 'В 18:00, после работы' },
+  { me: true, text: 'Записала вас на 18:00 к мастеру Ане. Адрес: пр. Победителей 65. До встречи!' }
+];
+var chatBox = document.getElementById('chatBox');
+CHAT.forEach(function(m){
+  var row = document.createElement('div');
+  row.style.cssText = 'display:flex;justify-content:' + (m.me ? 'flex-end' : 'flex-start') + ';opacity:0;transform:translateY(14px);transition:opacity .25s,transform .25s;';
+  var bubble = document.createElement('div');
+  bubble.style.cssText = 'max-width:78%;background:' + (m.me ? 'linear-gradient(135deg, rgba(167,139,250,.28), rgba(124,92,252,.22))' : '#17151F') + ';border:1px solid ' + (m.me ? 'rgba(167,139,250,.25)' : 'rgba(167,139,250,.06)') + ';border-radius:' + (m.me ? '18px 18px 6px 18px' : '18px 18px 18px 6px') + ';padding:12px 16px;font-size:14px;line-height:1.55;color:#F0EDF8;';
+  bubble.textContent = m.text;
+  row.appendChild(bubble);
+  chatBox.appendChild(row);
+});
+var demoN = 0, demoTimer = null;
+function demoTick(){
+  demoN = (demoN + 1) % 9;
+  var shown = Math.min(CHAT.length, Math.max(0, demoN));
+  Array.prototype.forEach.call(chatBox.children, function(row, i){
+    row.style.opacity = i < shown ? 1 : 0;
+    row.style.transform = i < shown ? 'translateY(0)' : 'translateY(14px)';
+  });
+}
+new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if (e.isIntersecting && !demoTimer) demoTimer = setInterval(demoTick, 700);
+    else if (!e.isIntersecting && demoTimer) { clearInterval(demoTimer); demoTimer = null; }
+  });
+}, { threshold: 0.25 }).observe(document.getElementById('demoSection'));
+
+// форма
+var fWay = document.getElementById('fWay');
+var fContact = document.getElementById('fContact');
+var privacyHint = document.getElementById('privacyHint');
+var PLACEHOLDERS = { 'Telegram': '@ник или номер', 'Instagram': '@ник', 'Телефон': 'Номер телефона', 'WhatsApp': 'Номер телефона' };
+fWay.addEventListener('change', function(){
+  fContact.placeholder = PLACEHOLDERS[fWay.value];
+  privacyHint.style.display = (fWay.value === 'Instagram' || fWay.value === 'Telegram') ? 'block' : 'none';
+});
+document.getElementById('fSubmit').addEventListener('click', function(){
+  var name = document.getElementById('fName').value.trim();
+  var contact = fContact.value.trim();
+  if (!name || !contact) {
+    (!name ? document.getElementById('fName') : fContact).style.borderColor = 'rgba(235,120,120,.7)';
+    return;
+  }
+  if (document.getElementById('fCompany').value) return; // honeypot: бот заполнил скрытое поле
+  fetch('https://script.google.com/macros/s/AKfycbwky1m6-vZQ_533zvG4mhHDUCjBKxZWJOxdOld8J2fcPWriF6nNUNhzkDlxjxd-1HJXSQ/exec', {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain' },
+    body: JSON.stringify({ name: name, contact: fWay.value + ': ' + contact, need: document.getElementById('fNeed').value })
+  }).catch(function(){});
+  document.getElementById('formCard').style.display = 'none';
+  var sc = document.getElementById('sentCard');
+  sc.style.display = 'flex';
+});
+</script>
+</body>
+</html>
