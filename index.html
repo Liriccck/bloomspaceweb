@@ -347,18 +347,22 @@ document.getElementById('fSubmit').addEventListener('click', function(){
   var unsure = document.getElementById('fUnsure').checked;
   var lines = window.BSW_CART ? window.BSW_CART.getLines(geoState.currency, geoState.rates) : [];
   var totals = window.BSW_CART ? window.BSW_CART.getTotals(geoState.currency, geoState.rates) : {};
-  var cartLines, cartOnce = null, cartMonthly = null;
+  // Каждая услуга/доп — в свой постоянный столбец таблицы (по id из pricing.js),
+  // а не безымянная "Позиция N": в шапке таблицы сразу видно, что это.
+  var cartByProduct = {};
+  var cartStatus = '';
   if (lines.length === 0) {
-    cartLines = [region === 'CIS' ? 'Пустая корзина — помочь определиться' : 'Empty cart — needs consultation'];
+    cartStatus = region === 'CIS' ? 'Пустая корзина — помочь определиться' : 'Empty cart — needs consultation';
   } else {
-    cartLines = lines.map(function (l) {
+    lines.forEach(function (l) {
+      var id = l.key.split(':').pop();
       var p = l.onceText || '';
       if (l.monthlyText) p += (p ? ' + ' : '') + l.monthlyText + (lang === 'ru' ? '/мес' : '/mo');
-      return l.title[lang] + ' — ' + p;
+      cartByProduct[id] = p;
     });
-    cartOnce = totals.onceRaw || null;
-    cartMonthly = totals.monthlyRaw || null;
   }
+  var cartOnce = lines.length ? (totals.onceRaw || null) : null;
+  var cartMonthly = lines.length ? (totals.monthlyRaw || null) : null;
 
   fetch('https://script.google.com/macros/s/AKfycbxJMpZFgELLIcyQJxKMngSPdKDfpS2mkFydNG5FGr6knbIYxQGFYql4gCzOr5xPYaCSZg/exec', {
     method: 'POST',
@@ -372,7 +376,8 @@ document.getElementById('fSubmit').addEventListener('click', function(){
       country: geoState.country || '',
       region: region,
       currency: geoState.currency,
-      cartLines: cartLines,
+      cartByProduct: cartByProduct,
+      cartStatus: cartStatus,
       cartOnce: cartOnce,
       cartMonthly: cartMonthly,
       lang: region === 'EN' ? 'ENG' : 'RU'
