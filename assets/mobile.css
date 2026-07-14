@@ -6,6 +6,12 @@
 }
 
 @media (max-width: 680px) {
+  /* Flex/grid children default to min-width:auto (= their content's
+     min-content), which lets a long unbreakable string (e.g. a <select>
+     option) force its container wider than the viewport. Zeroing it out
+     lets everything actually shrink to fit instead of overflowing. */
+  * { min-width: 0; }
+
   .bsw-nav { padding: 10px 16px !important; }
   .bsw-nav-links { gap: 10px !important; }
   .bsw-nav-home { display: none !important; }
