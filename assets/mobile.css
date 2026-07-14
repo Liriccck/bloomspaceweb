@@ -1,6 +1,9 @@
 /* Responsive overrides. Markup uses inline styles everywhere, so these
    rules use !important to win over them at narrow viewports. */
 
+@keyframes bswBadgePop { 0% { transform: scale(1); } 45% { transform: scale(1.45); } 100% { transform: scale(1); } }
+[data-cart-badge].bsw-badge-pop { animation: bswBadgePop .38s ease; }
+
 @media (max-width: 900px) {
   .bsw-grid-4 { grid-template-columns: 1fr 1fr !important; }
 }

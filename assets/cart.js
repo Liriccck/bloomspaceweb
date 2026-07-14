@@ -53,12 +53,21 @@
     return window.BSW.convertByn(byn, currency, rates);
   }
 
+  var lastBadgeCount = null;
+
   function updateBadges() {
     var count = load().length;
+    var changed = lastBadgeCount !== null && count !== lastBadgeCount;
     document.querySelectorAll('[data-cart-badge]').forEach(function (el) {
       el.textContent = count;
       el.style.display = count > 0 ? '' : 'none';
+      if (changed && count > 0) {
+        el.classList.remove('bsw-badge-pop');
+        void el.offsetWidth; // restart the animation even if it's already applied
+        el.classList.add('bsw-badge-pop');
+      }
     });
+    lastBadgeCount = count;
   }
 
   window.BSW_CART = {

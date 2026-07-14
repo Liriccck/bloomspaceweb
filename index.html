@@ -180,12 +180,10 @@ a { color: #C4B0FA; }
         </div>
         <div id="privacyHint" data-en="Make sure your profile is open and accepts messages — otherwise I won't be able to write to you" style="font-size: 12.5px; color: #9B94AD; font-weight: 600; line-height: 1.5; margin-top: -8px;">Проверьте, что профиль открыт и принимает сообщения — иначе я не смогу вам написать</div>
         <input id="fCompany" tabindex="-1" autocomplete="off" style="position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none;" aria-hidden="true">
-        <select id="fNeed" style="cursor: pointer; background-color: #13111B; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%23C4B0FA' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E&quot;); background-repeat: no-repeat; background-position: right 18px center; border: 1px solid rgba(167,139,250,.16); border-radius: 14px; padding: 16px 40px 16px 18px; font-size: 15px; color: #F2F0F7; font-family: Manrope, sans-serif; font-weight: 600; outline: none; appearance: none;">
-          <option value="ИИ-администратор" data-en="I need an AI receptionist">Нужен ИИ-администратор</option>
-          <option value="Сайт" data-en="I need a website or landing page">Нужен сайт или лендинг</option>
-          <option value="Сайт + ИИ" data-en="Website + AI receptionist">Сайт + ИИ-администратор</option>
-          <option value="Не знаю" data-en="Not sure yet — help me figure it out">Пока не знаю — разберитесь со мной</option>
-        </select>
+        <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 2px 2px;">
+          <input type="checkbox" id="fUnsure" style="width: 20px; height: 20px; flex: none; accent-color: #8B6CF7; cursor: pointer;">
+          <span data-en="Not sure what I need — help me decide" style="font-size: 14px; color: #D8D3E6; font-weight: 600;">Не могу определиться — помогите выбрать</span>
+        </label>
         <textarea id="fComment" maxlength="500" rows="2" placeholder="Комментарий (необязательно)" data-en-placeholder="Comment (optional)" style="resize: vertical; background: #13111B; border: 1px solid rgba(167,139,250,.16); border-radius: 14px; padding: 14px 18px; font-size: 15px; color: #F2F0F7; font-family: Manrope, sans-serif; font-weight: 600; outline: none;" style-focus="border-color: rgba(167,139,250,.6);"></textarea>
         <button id="fSubmit" data-en="Get a plan and a price" style="cursor: pointer; border: none; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); color: #0B0714; font-family: Manrope, sans-serif; font-weight: 800; font-size: 16px; padding: 17px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Получить план и цену</button>
         <div data-en="I reply personally, usually within a couple of hours" style="font-size: 12.5px; color: #9B94AD; font-weight: 600; text-align: center;">Отвечаю лично, обычно в течение пары часов</div>
@@ -346,17 +344,18 @@ document.getElementById('fSubmit').addEventListener('click', function(){
   var lang = document.documentElement.lang === 'en' ? 'en' : 'ru';
   var region = lang === 'en' ? 'EN' : 'CIS';
   var comment = document.getElementById('fComment').value.trim();
+  var unsure = document.getElementById('fUnsure').checked;
   var lines = window.BSW_CART ? window.BSW_CART.getLines(geoState.currency, geoState.rates) : [];
   var totals = window.BSW_CART ? window.BSW_CART.getTotals(geoState.currency, geoState.rates) : {};
-  var cartText, cartOnce = null, cartMonthly = null;
+  var cartLines, cartOnce = null, cartMonthly = null;
   if (lines.length === 0) {
-    cartText = region === 'CIS' ? 'Пустая корзина — помочь определиться' : 'Empty cart — needs consultation';
+    cartLines = [region === 'CIS' ? 'Пустая корзина — помочь определиться' : 'Empty cart — needs consultation'];
   } else {
-    cartText = lines.map(function (l) {
+    cartLines = lines.map(function (l) {
       var p = l.onceText || '';
       if (l.monthlyText) p += (p ? ' + ' : '') + l.monthlyText + (lang === 'ru' ? '/мес' : '/mo');
       return l.title[lang] + ' — ' + p;
-    }).join('; ');
+    });
     cartOnce = totals.onceRaw || null;
     cartMonthly = totals.monthlyRaw || null;
   }
@@ -368,12 +367,12 @@ document.getElementById('fSubmit').addEventListener('click', function(){
     body: JSON.stringify({
       name: name,
       contact: fWay.value + ': ' + contact,
-      need: document.getElementById('fNeed').value,
+      unsure: unsure,
       comment: comment,
       country: geoState.country || '',
       region: region,
       currency: geoState.currency,
-      cart: cartText,
+      cartLines: cartLines,
       cartOnce: cartOnce,
       cartMonthly: cartMonthly,
       lang: region === 'EN' ? 'ENG' : 'RU'
