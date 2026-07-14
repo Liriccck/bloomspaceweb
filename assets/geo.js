@@ -1,5 +1,7 @@
 (function () {
   var CIS = { RU: 'RUB', KZ: 'KZT', AM: 'AMD', AZ: 'AZN', KG: 'KGS', MD: 'MDL', TJ: 'TJS', TM: 'TMT', UZ: 'UZS' };
+  var readyCallbacks = [];
+  var resolved = null; // { country, currency, rates } once known
 
   // USD/EU market pricing is not a raw FX pass-through: local (BYN/CIS) prices reflect
   // local cost of living, which is far below what freelance work like this commands in
@@ -7,7 +9,7 @@
   // with typical Western freelance rates instead of underselling the work.
   var USD_MULTIPLIER = 4;
 
-  function fmt(byn, currency, rates) {
+  function convertByn(byn, currency, rates) {
     if (!rates || !rates[currency]) return null;
     var raw = byn * rates[currency];
     if (currency === 'USD') raw *= USD_MULTIPLIER;
@@ -15,6 +17,12 @@
     var val = Math.round(raw / 10) * 10 - 1;
     if (val < 9) val = 9;
     if (!isFinite(val)) return null;
+    return val;
+  }
+
+  function fmt(byn, currency, rates) {
+    var val = convertByn(byn, currency, rates);
+    if (val === null) return null;
     var num = val.toLocaleString('en-US');
     if (currency === 'USD') return '$' + num;
     if (currency === 'RUB') return num + ' ₽';
@@ -99,14 +107,40 @@
     }
   }
 
+  function resolve(country, currency, rates) {
+    ready(function () {
+      resolved = { country: country || 'BY', currency: currency, rates: rates || null };
+      readyCallbacks.forEach(function (cb) { cb(resolved.currency, resolved.rates, resolved.country); });
+      readyCallbacks.length = 0;
+    });
+  }
+
   function run(countryCode) {
-    if (!countryCode || countryCode === 'BY') return;
+    if (!countryCode || countryCode === 'BY') { resolve(countryCode, 'BYN', null); return; }
     var currency = CIS[countryCode] || 'USD';
     ready(function () {
       if (!CIS[countryCode]) applyEnglish();
-      withRates(function (rates) { applyPrices(currency, rates); localizeDemoPrices(currency, rates); });
+      withRates(function (rates) {
+        applyPrices(currency, rates);
+        localizeDemoPrices(currency, rates);
+        resolve(countryCode, currency, rates);
+      });
     });
   }
+
+  window.BSW = {
+    // Registers cb(currency, rates, country) to run once the region/rates are
+    // known (immediately if already resolved). currency is 'BYN' for BY/unknown
+    // visitors (show base prices as-is), a CIS currency code, or 'USD'.
+    onReady: function (cb) {
+      if (resolved) { ready(function () { cb(resolved.currency, resolved.rates, resolved.country); }); }
+      else { readyCallbacks.push(cb); }
+    },
+    // Same BYN->currency formula used for all existing on-page prices.
+    formatByn: fmt,
+    convertByn: convertByn,
+    isCIS: function (countryCode) { return !!CIS[countryCode]; }
+  };
 
   var cachedCountry = cacheGet('bswCountry');
   if (cachedCountry) { run(cachedCountry); return; }
@@ -118,5 +152,5 @@
       cacheSet('bswCountry', cc);
       run(cc);
     })
-    .catch(function () {});
+    .catch(function () { resolve('', 'BYN', null); });
 })();

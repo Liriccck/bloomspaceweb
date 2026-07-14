@@ -7,6 +7,8 @@
 </head>
 <body>
 <script src="assets/geo.js?v=2"></script>
+<script src="assets/pricing.js"></script>
+<script src="assets/cart.js"></script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -31,6 +33,7 @@ body { margin: 0; background: #050506; }
       <a href="index.html" data-en="Home" class="bsw-nav-home" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600;" style-hover="color: #F2F0F7;">Главная</a>
       <a href="uslugi.html" data-en="Services" class="bsw-nav-link" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600;" style-hover="color: #F2F0F7;">Услуги</a>
       <a href="ceny.html" data-en="Pricing" class="bsw-nav-link" style="color: #F2F0F7; text-decoration: none; font-size: 14px; font-weight: 700;">Цены</a>
+      <a href="korzina.html" data-en="Cart" class="bsw-nav-link" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 6px;" style-hover="color: #F2F0F7;">Корзина <span data-cart-badge style="display:none;background:#8B6CF7;color:#fff;border-radius:100px;min-width:16px;text-align:center;padding:1px 6px;font-size:11px;font-weight:800;">0</span></a>
       <a href="index.html#form" data-en="Get a quote" class="bsw-nav-cta" style="color: #0B0714; text-decoration: none; font-size: 13px; font-weight: 800; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); padding: 10px 22px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Оставить заявку</a>
     </div>
   </div>
@@ -39,95 +42,28 @@ body { margin: 0; background: #050506; }
   <div class="bsw-page-header" data-screen-label="Заголовок" style="max-width: 1240px; margin: 0 auto; padding: 170px 40px 70px;">
     <div data-en="Pricing" style="font-size: 13px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: #A78BFA; margin-bottom: 18px;">Цены</div>
     <div data-en="Honest pricing. Right here, no sales call needed" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(36px, 4.4vw, 64px); line-height: 1.1; max-width: 880px;">Честные цены. Прямо здесь, без звонка менеджера</div>
-    <div style="font-size: 18px; line-height: 1.7; color: #9B94AD; font-weight: 500; max-width: 620px; margin-top: 24px;"><span data-en="Fixed price — you know the final number before we start. A ">Фиксированная стоимость — вы знаете финальную цифру до старта. Предоплата </span><span data-byn="49">49</span> <span data-cur>BYN</span><span data-en=" deposit, the rest after the work is delivered.">, остальное после сдачи работы.</span></div>
+    <div data-en="Fixed price — you know the final number before we start. Payment is 50% upfront, 50% on launch." style="font-size: 18px; line-height: 1.7; color: #9B94AD; font-weight: 500; max-width: 620px; margin-top: 24px;">Фиксированная стоимость — вы знаете финальную цифру до старта. Оплата 50/50: половина при старте, половина при запуске.</div>
   </div>
 
   <!-- ТАРИФЫ -->
   <div class="bsw-section" data-screen-label="Тарифы" style="max-width: 1240px; margin: 0 auto; padding: 0 40px 60px;">
-    <div data-en="A la carte" style="font-size: 13px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #9B94AD; margin-bottom: 18px;">По отдельности</div>
-    <div class="bsw-grid-3" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 44px;">
+    <div data-en="Plans" style="font-size: 13px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #9B94AD; margin-bottom: 18px;">Тарифы</div>
+    <div id="pricingCards" class="bsw-grid-3" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 44px;"></div>
 
-      <div style="background: #0C0B12; border: 1px solid rgba(167,139,250,.14); border-radius: 26px; padding: 32px 28px; display: flex; flex-direction: column; gap: 18px;">
-        <div data-en="AI receptionist" style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 17px;">ИИ-администратор</div>
-        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 38px;"><span data-byn="199">199</span> <span data-cur style="font-size: 18px; color: #9B94AD;">BYN</span></div>
-        <div style="font-size: 13.5px; font-weight: 700; color: #C4B0FA;"><span data-en="+ ">+ </span><span data-byn="99">99</span> <span data-cur>BYN</span><span data-en="/mo — subscription required">/мес — подписка обязательна</span></div>
-        <div style="display: flex; flex-direction: column; gap: 10px; padding-top: 4px; border-top: 1px solid rgba(167,139,250,.12);">
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Calls, chats, or both together" style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Звонки, переписки или всё вместе</span></div>
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Configured for your services and prices" style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Настройка под ваши услуги и цены</span></div>
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Subscription = support, updates, I'm on call" style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Подписка = поддержка, обновления, я на связи</span></div>
-        </div>
-        <a href="index.html#form" data-en="Choose" style="margin-top: auto; text-align: center; text-decoration: none; color: #F2F0F7; border: 1px solid rgba(167,139,250,.3); font-weight: 800; font-size: 14px; padding: 13px; border-radius: 100px;" style-hover="border-color: rgba(167,139,250,.7);">Выбрать</a>
-      </div>
-
-      <div style="background: #0C0B12; border: 1px solid rgba(167,139,250,.14); border-radius: 26px; padding: 32px 28px; display: flex; flex-direction: column; gap: 18px;">
-        <div data-en="Landing page" style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 17px;">Лендинг</div>
-        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 38px;"><span data-byn="199">199</span> <span data-cur style="font-size: 18px; color: #9B94AD;">BYN</span></div>
-        <div style="display: flex; flex-direction: column; gap: 10px; padding-top: 4px; border-top: 1px solid rgba(167,139,250,.12);">
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Design built for your brand, not a template" style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Дизайн под бренд, не шаблон</span></div>
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Selling copy — written by me" style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Продающие тексты — пишу сам</span></div>
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Ready to run ads on day one" style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Готов к запуску рекламы</span></div>
-        </div>
-        <a href="index.html#form" data-en="Choose" style="margin-top: auto; text-align: center; text-decoration: none; color: #F2F0F7; border: 1px solid rgba(167,139,250,.3); font-weight: 800; font-size: 14px; padding: 13px; border-radius: 100px;" style-hover="border-color: rgba(167,139,250,.7);">Выбрать</a>
-      </div>
-
-      <div style="background: #0C0B12; border: 1px solid rgba(167,139,250,.14); border-radius: 26px; padding: 32px 28px; display: flex; flex-direction: column; gap: 18px;">
-        <div data-en="Multi-page website" style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 17px;">Многостраничный сайт</div>
-        <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 38px;"><span data-byn="449">449</span> <span data-cur style="font-size: 18px; color: #9B94AD;">BYN</span></div>
-        <div style="display: flex; flex-direction: column; gap: 10px; padding-top: 4px; border-top: 1px solid rgba(167,139,250,.12);">
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Several pages covering your whole business" style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Несколько страниц под весь бизнес</span></div>
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Selling copy — written by me" style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Продающие тексты — пишу сам</span></div>
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Looks right on phones, ready for ads" style="font-size: 14px; line-height: 1.5; color: #D8D3E6; font-weight: 600;">Корректно на телефоне, готов к рекламе</span></div>
-        </div>
-        <a href="index.html#form" data-en="Choose" style="margin-top: auto; text-align: center; text-decoration: none; color: #F2F0F7; border: 1px solid rgba(167,139,250,.3); font-weight: 800; font-size: 14px; padding: 13px; border-radius: 100px;" style-hover="border-color: rgba(167,139,250,.7);">Выбрать</a>
-      </div>
-
-    </div>
-
-    <div data-en="Hot deals" style="font-size: 13px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #9B94AD; margin-bottom: 18px;">Горячие предложения</div>
-    <div class="bsw-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-
-      <div class="bsw-hotdeal" style="background: linear-gradient(165deg, rgba(167,139,250,.16), rgba(124,92,252,.05)); border: 1px solid rgba(167,139,250,.45); border-radius: 26px; padding: 38px 34px; display: flex; flex-direction: column; gap: 20px; position: relative;">
-        <div class="bsw-hotdeal-badge" data-en="Most popular" style="position: absolute; top: -13px; left: 34px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); padding: 7px 16px; border-radius: 100px;">Берут чаще всего</div>
-        <div data-en="Landing page + AI receptionist" style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 19px;">Лендинг + ИИ-администратор</div>
-        <div style="display: flex; align-items: baseline; gap: 12px;">
-          <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 44px;"><span data-byn="349">349</span> <span data-cur style="font-size: 20px; color: #9B94AD;">BYN</span></div>
-          <div style="font-size: 15px; font-weight: 700; color: #9B94AD; text-decoration: line-through;"><span data-byn="399">399</span></div>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 11px; padding-top: 6px; border-top: 1px solid rgba(167,139,250,.2);">
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="The site brings the client — the AI closes the booking" style="font-size: 14.5px; line-height: 1.55; color: #F0EDF8; font-weight: 600;">Сайт приводит клиента — ИИ доводит до записи</span></div>
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Everything from the &quot;Landing page&quot; and &quot;AI receptionist&quot; plans" style="font-size: 14.5px; line-height: 1.55; color: #F0EDF8; font-weight: 600;">Всё из тарифов «Лендинг» и «ИИ-администратор»</span></div>
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span style="font-size: 14.5px; line-height: 1.55; color: #F0EDF8; font-weight: 600;"><span data-en="Save ">Экономия </span><span data-byn="50">50</span> <span data-cur>BYN</span><span data-en=" vs. buying separately"> против покупки по отдельности</span></span></div>
-        </div>
-        <a href="index.html#form" data-en="Choose this bundle" style="margin-top: auto; text-align: center; text-decoration: none; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); font-weight: 800; font-size: 15px; padding: 15px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Выбрать связку</a>
-      </div>
-
-      <div class="bsw-hotdeal" style="background: linear-gradient(165deg, rgba(167,139,250,.16), rgba(124,92,252,.05)); border: 1px solid rgba(167,139,250,.45); border-radius: 26px; padding: 38px 34px; display: flex; flex-direction: column; gap: 20px; position: relative;">
-        <div data-en="Multi-page website + AI receptionist" style="font-family: Unbounded, sans-serif; font-weight: 600; font-size: 19px;">Многостраничный сайт + ИИ-администратор</div>
-        <div style="display: flex; align-items: baseline; gap: 12px;">
-          <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 44px;"><span data-byn="549">549</span> <span data-cur style="font-size: 20px; color: #9B94AD;">BYN</span></div>
-          <div style="font-size: 15px; font-weight: 700; color: #9B94AD; text-decoration: line-through;"><span data-byn="649">649</span></div>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 11px; padding-top: 6px; border-top: 1px solid rgba(167,139,250,.2);">
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="The site brings the client — the AI closes the booking" style="font-size: 14.5px; line-height: 1.55; color: #F0EDF8; font-weight: 600;">Сайт приводит клиента — ИИ доводит до записи</span></div>
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span data-en="Everything from the &quot;Multi-page website&quot; and &quot;AI receptionist&quot; plans" style="font-size: 14.5px; line-height: 1.55; color: #F0EDF8; font-weight: 600;">Всё из тарифов «Многостраничный сайт» и «ИИ-администратор»</span></div>
-          <div style="display: flex; gap: 10px;"><span style="color: #7DE3A8; font-weight: 800;">✓</span><span style="font-size: 14.5px; line-height: 1.55; color: #F0EDF8; font-weight: 600;"><span data-en="Save ">Экономия </span><span data-byn="100">100</span> <span data-cur>BYN</span><span data-en=" vs. buying separately"> против покупки по отдельности</span></span></div>
-        </div>
-        <a href="index.html#form" data-en="Choose this bundle" style="margin-top: auto; text-align: center; text-decoration: none; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); font-weight: 800; font-size: 15px; padding: 15px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Выбрать связку</a>
-      </div>
-
-    </div>
+    <div data-en="Add-ons" style="font-size: 13px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #9B94AD; margin-bottom: 18px;">Расширения</div>
+    <div id="addonsSection"></div>
   </div>
 
   <!-- УСЛОВИЯ -->
   <div class="bsw-section" data-screen-label="Условия" style="max-width: 1240px; margin: 0 auto; padding: 20px 40px 100px;">
     <div class="bsw-grid-3" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
       <div style="border-top: 2px solid rgba(167,139,250,.4); padding-top: 20px;">
-        <div style="font-weight: 800; font-size: 16px; margin-bottom: 8px;"><span data-en="Deposit — ">Предоплата — </span><span data-byn="49">49</span> <span data-cur>BYN</span></div>
-        <div data-en="Secures your spot in the queue and starts the work. The rest is paid once you've accepted the result." style="font-size: 14.5px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Фиксирует место в очереди и старт работы. Остальное — после того, как вы приняли результат.</div>
+        <div data-en="Payment — 50/50" style="font-weight: 800; font-size: 16px; margin-bottom: 8px;">Оплата — 50/50</div>
+        <div data-en="Half when we start, half on launch. Fixes your spot in the queue and locks the price." style="font-size: 14.5px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Половина при старте, половина при запуске. Фиксирует место в очереди и саму цену.</div>
       </div>
       <div style="border-top: 2px solid rgba(167,139,250,.4); padding-top: 20px;">
-        <div style="font-weight: 800; font-size: 16px; margin-bottom: 8px;"><span data-en="Subscription — ">Подписка — </span><span data-byn="99">99</span> <span data-cur>BYN</span><span data-en="/mo, required">/мес, обязательна</span></div>
-        <div data-en="Without it the AI receptionist doesn't run: the subscription covers the AI itself, updates, and me staying on call for support." style="font-size: 14.5px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Без неё ИИ-администратор не работает: подписка покрывает саму работу ИИ, обновления и мою поддержку на связи.</div>
+        <div data-en="Subscription — plan-dependent" style="font-weight: 800; font-size: 16px; margin-bottom: 8px;">Подписка — по тарифу</div>
+        <div data-en="Required for AI-administrator plans: covers the AI itself, updates, and me staying on call for support." style="font-size: 14.5px; line-height: 1.65; color: #9B94AD; font-weight: 500;">Обязательна для тарифов с AI-администратором: покрывает саму работу ИИ, обновления и мою поддержку на связи.</div>
       </div>
       <div style="border-top: 2px solid rgba(167,139,250,.4); padding-top: 20px;">
         <div data-en="No hidden fees" style="font-weight: 800; font-size: 16px; margin-bottom: 8px;">Без скрытых доплат</div>
@@ -175,6 +111,104 @@ document.querySelectorAll('[style-focus]').forEach(function(el){
   el.addEventListener('focus', function(){ el.style.cssText = base + ';' + foc; });
   el.addEventListener('blur', function(){ el.style.cssText = base; });
 });
+</script>
+
+<script>
+// цены и расширения — рендер из assets/pricing.js
+(function () {
+  var state = { lang: 'ru', currency: 'BYN', rates: null };
+
+  function bynText(n) { return Math.round(n).toLocaleString('ru-RU') + ' BYN'; }
+
+  function priceText(byn, usd, currency, rates) {
+    if (currency === 'USD') return usd != null ? '$' + Math.round(usd).toLocaleString('en-US') : null;
+    if (!currency || currency === 'BYN') return byn != null ? bynText(byn) : null;
+    if (byn == null || !window.BSW) return null;
+    return window.BSW.formatByn(byn, currency, rates);
+  }
+
+  function cardHTML(card) {
+    var lang = state.lang, currency = state.currency, rates = state.rates;
+    var t = card.title[lang], d = card.desc[lang];
+    var once = priceText(card.byn, card.usd, currency, rates);
+    var hasMo = card.bynMonthly != null || card.usdMonthly != null;
+    var mo = hasMo ? priceText(card.bynMonthly, card.usdMonthly, currency, rates) : null;
+    var inCart = window.BSW_CART.isInCart('card:' + card.id);
+    var badgeHtml = card.badge ? '<div class="bsw-hotdeal-badge" style="position:absolute;top:-13px;left:28px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#0B0714;background:linear-gradient(135deg,#C4B0FA,#8B6CF7);padding:7px 16px;border-radius:100px;">' + card.badge[lang] + '</div>' : '';
+    var noteHtml = card.note ? '<div style="font-size:12.5px;color:#A78BFA;font-weight:700;">' + card.note[lang] + '</div>' : '';
+    var moHtml = mo ? '<div style="font-size:13.5px;font-weight:700;color:#C4B0FA;">+ ' + mo + (lang === 'ru' ? '/мес' : '/mo') + '</div>' : '';
+    var cls = card.badge ? 'bsw-hotdeal' : '';
+    var border = card.badge ? 'rgba(167,139,250,.45)' : 'rgba(167,139,250,.14)';
+    var btnLabel = inCart ? (lang === 'ru' ? 'В корзине ✓' : 'In cart ✓') : (lang === 'ru' ? '+ В корзину' : '+ Add to cart');
+    return '<div class="' + cls + '" style="position:relative;background:#0C0B12;border:1px solid ' + border + ';border-radius:26px;padding:32px 28px;display:flex;flex-direction:column;gap:14px;">' +
+      badgeHtml +
+      '<div style="font-family:Unbounded,sans-serif;font-weight:600;font-size:18px;">' + t + '</div>' +
+      '<div style="font-size:14px;line-height:1.6;color:#9B94AD;font-weight:500;">' + d + '</div>' +
+      noteHtml +
+      '<div style="font-family:Unbounded,sans-serif;font-weight:700;font-size:32px;margin-top:4px;">' + (once || '') + '</div>' +
+      moHtml +
+      '<button type="button" data-cart-key="card:' + card.id + '" class="bsw-cart-btn" style="margin-top:auto;cursor:pointer;text-align:center;border:1px solid ' + (inCart ? 'rgba(125,227,168,.5)' : 'rgba(167,139,250,.3)') + ';background:' + (inCart ? 'rgba(125,227,168,.1)' : 'transparent') + ';color:' + (inCart ? '#7DE3A8' : '#F2F0F7') + ';font-weight:800;font-size:14px;padding:13px;border-radius:100px;">' + btnLabel + '</button>' +
+    '</div>';
+  }
+
+  function addonRowHTML(item, groupId) {
+    var lang = state.lang, currency = state.currency, rates = state.rates;
+    var once = priceText(item.byn, item.usd, currency, rates);
+    var mo = priceText(item.bynMonthly, item.usdMonthly, currency, rates);
+    var priceStr = once ? once : (mo ? mo + (lang === 'ru' ? '/мес' : '/mo') : '');
+    if (item.replacesBase && item.note) priceStr += ' <span style="color:#6E6880;font-weight:600;">(' + item.note[lang] + ')</span>';
+    var key = 'addon:' + groupId + ':' + item.id;
+    var inCart = window.BSW_CART.isInCart(key);
+    return '<div style="display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 18px;background:#0C0B12;border:1px solid rgba(167,139,250,.12);border-radius:14px;">' +
+      '<div style="display:flex;align-items:center;gap:12px;">' +
+        '<button type="button" data-cart-key="' + key + '" class="bsw-cart-dot" aria-label="' + (lang === 'ru' ? 'Добавить в корзину' : 'Add to cart') + '" style="cursor:pointer;flex:none;width:24px;height:24px;border-radius:50%;border:1px solid ' + (inCart ? '#7DE3A8' : 'rgba(167,139,250,.4)') + ';background:' + (inCart ? '#7DE3A8' : 'transparent') + ';color:#0B0714;font-weight:800;font-size:13px;line-height:1;display:flex;align-items:center;justify-content:center;">' + (inCart ? '✓' : '') + '</button>' +
+        '<div style="font-size:14.5px;color:#D8D3E6;font-weight:600;">' + item.title[lang] + '</div>' +
+      '</div>' +
+      '<div style="font-size:14px;color:#C4B0FA;font-weight:700;white-space:nowrap;">' + priceStr + '</div>' +
+    '</div>';
+  }
+
+  function groupHTML(group) {
+    var lang = state.lang;
+    var rows = group.items.map(function (item) { return addonRowHTML(item, group.id); }).join('');
+    var applies = group.appliesTo ? '<div style="font-size:12px;color:#6E6880;font-weight:600;margin-bottom:10px;">' + group.appliesTo[lang] + '</div>' : '';
+    return '<div style="margin-bottom:26px;">' +
+      '<div style="font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#9B94AD;margin-bottom:8px;">' + group.label[lang] + '</div>' +
+      applies +
+      '<div style="display:flex;flex-direction:column;gap:10px;">' + rows + '</div>' +
+    '</div>';
+  }
+
+  function render() {
+    var cardsEl = document.getElementById('pricingCards');
+    var addonsEl = document.getElementById('addonsSection');
+    if (!cardsEl || !addonsEl || !window.BSW_PRICING || !window.BSW_CART) return;
+    cardsEl.innerHTML = window.BSW_PRICING.cards.map(cardHTML).join('');
+    addonsEl.innerHTML = window.BSW_PRICING.addonGroups.map(groupHTML).join('');
+  }
+
+  function onCartClick(e) {
+    var btn = e.target.closest('[data-cart-key]');
+    if (!btn) return;
+    window.BSW_CART.toggle(btn.getAttribute('data-cart-key'));
+    render();
+  }
+
+  render(); // immediate RU/BYN render so content isn't blank while region resolves
+  var cardsHost = document.getElementById('pricingCards');
+  var addonsHost = document.getElementById('addonsSection');
+  if (cardsHost) cardsHost.addEventListener('click', onCartClick);
+  if (addonsHost) addonsHost.addEventListener('click', onCartClick);
+
+  if (window.BSW) {
+    window.BSW.onReady(function (currency, rates) {
+      state.lang = document.documentElement.lang === 'en' ? 'en' : 'ru';
+      state.currency = currency;
+      state.rates = rates;
+      render();
+    });
+  }
+})();
 </script>
 </body>
 </html>

@@ -22,6 +22,8 @@ a { color: #C4B0FA; }
 </head>
 <body>
 <script src="assets/geo.js?v=2"></script>
+<script src="assets/pricing.js"></script>
+<script src="assets/cart.js"></script>
 <div style="font-family: Manrope, sans-serif; background-color: #050506; background-image: radial-gradient(900px 600px at 85% 12%, rgba(124,92,252,.07), transparent 60%), radial-gradient(800px 550px at 8% 55%, rgba(167,139,250,.05), transparent 60%), radial-gradient(1000px 650px at 90% 92%, rgba(124,92,252,.06), transparent 60%), url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cg fill='%23C4B0FA'%3E%3Ccircle cx='18' cy='32' r='1' opacity='.16'/%3E%3Ccircle cx='84' cy='9' r='.8' opacity='.12'/%3E%3Ccircle cx='150' cy='51' r='1' opacity='.14'/%3E%3Ccircle cx='203' cy='96' r='.8' opacity='.1'/%3E%3Ccircle cx='55' cy='118' r='1' opacity='.15'/%3E%3Ccircle cx='121' cy='160' r='.8' opacity='.11'/%3E%3Ccircle cx='180' cy='196' r='1' opacity='.13'/%3E%3Ccircle cx='30' cy='201' r='.8' opacity='.1'/%3E%3Ccircle cx='108' cy='78' r='.7' opacity='.09'/%3E%3C/g%3E%3C/svg%3E&quot;); background-attachment: fixed; color: #F2F0F7; min-height: 100vh;">
 
   <!-- NAV -->
@@ -33,6 +35,7 @@ a { color: #C4B0FA; }
       <a href="index.html" data-en="Home" class="bsw-nav-home" style="color: #F2F0F7; text-decoration: none; font-size: 14px; font-weight: 700;">Главная</a>
       <a href="uslugi.html" data-en="Services" class="bsw-nav-link" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600;" style-hover="color: #F2F0F7;">Услуги</a>
       <a href="ceny.html" data-en="Pricing" class="bsw-nav-link" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600;" style-hover="color: #F2F0F7;">Цены</a>
+      <a href="korzina.html" data-en="Cart" class="bsw-nav-link" style="color: #9B94AD; text-decoration: none; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 6px;" style-hover="color: #F2F0F7;">Корзина <span data-cart-badge style="display:none;background:#8B6CF7;color:#fff;border-radius:100px;min-width:16px;text-align:center;padding:1px 6px;font-size:11px;font-weight:800;">0</span></a>
       <a href="#form" data-en="Get a quote" class="bsw-nav-cta" style="color: #0B0714; text-decoration: none; font-size: 13px; font-weight: 800; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); padding: 10px 22px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Оставить заявку</a>
     </div>
   </div>
@@ -142,32 +145,8 @@ a { color: #C4B0FA; }
         <div data-en="Pricing without &quot;leave a&lt;br&gt;request to find out&quot;" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 48px); line-height: 1.15;">Цены без «оставьте<br>заявку и узнаете»</div>
         <a href="ceny.html" data-en="All plans →" style="text-decoration: none; color: #C4B0FA; font-weight: 800; font-size: 15px; white-space: nowrap; border-bottom: 1px solid rgba(167,139,250,.4); padding-bottom: 3px;" style-hover="color: #F2F0F7;">Все тарифы →</a>
       </div>
-      <div class="bsw-grid-3" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 20px;">
-        <div style="background: #0C0B12; border: 1px solid rgba(167,139,250,.14); border-radius: 20px; padding: 24px 22px; display: flex; flex-direction: column; gap: 6px;">
-          <div data-en="AI receptionist" style="font-weight: 800; font-size: 14px; color: #9B94AD;">ИИ-администратор</div>
-          <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 28px;"><span data-byn="199">199</span> <span data-cur style="font-size: 15px; color: #9B94AD;">BYN</span></div>
-          <div style="font-size: 12.5px; color: #9B94AD; font-weight: 600;"><span data-en="+ ">+ </span><span data-byn="99">99</span> <span data-cur>BYN</span><span data-en="/mo subscription required">/мес подписка обязательна</span></div>
-        </div>
-        <div style="background: #0C0B12; border: 1px solid rgba(167,139,250,.14); border-radius: 20px; padding: 24px 22px; display: flex; flex-direction: column; gap: 6px;">
-          <div data-en="Landing page" style="font-weight: 800; font-size: 14px; color: #9B94AD;">Лендинг</div>
-          <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 28px;"><span data-byn="199">199</span> <span data-cur style="font-size: 15px; color: #9B94AD;">BYN</span></div>
-        </div>
-        <div style="background: #0C0B12; border: 1px solid rgba(167,139,250,.14); border-radius: 20px; padding: 24px 22px; display: flex; flex-direction: column; gap: 6px;">
-          <div data-en="Multi-page website" style="font-weight: 800; font-size: 14px; color: #9B94AD;">Многостраничный сайт</div>
-          <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 28px;"><span data-byn="449">449</span> <span data-cur style="font-size: 15px; color: #9B94AD;">BYN</span></div>
-        </div>
-      </div>
-      <div class="bsw-hotdeal" style="background: linear-gradient(160deg, rgba(167,139,250,.16), rgba(124,92,252,.06)); border: 1px solid rgba(167,139,250,.4); border-radius: 24px; padding: 30px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; position: relative;">
-        <div class="bsw-hotdeal-badge" data-en="Hot deal" style="position: absolute; top: -12px; left: 32px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); padding: 6px 14px; border-radius: 100px;">Горячее предложение</div>
-        <div>
-          <div data-en="Landing page + AI receptionist" style="font-weight: 800; font-size: 16px; color: #C4B0FA; margin-bottom: 6px;">Лендинг + ИИ-администратор</div>
-          <div data-en="The site sells — the AI closes the booking" style="font-size: 14px; color: #9B94AD; font-weight: 600;">Сайт продаёт — ИИ дожимает до записи</div>
-        </div>
-        <div style="display: flex; align-items: baseline; gap: 20px;">
-          <div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 34px;"><span data-byn="349">349</span> <span data-cur style="font-size: 18px; color: #9B94AD;">BYN</span></div>
-          <a href="ceny.html" data-en="All bundles →" style="text-decoration: none; color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); font-weight: 800; font-size: 14px; padding: 12px 24px; border-radius: 100px; white-space: nowrap;" style-hover="filter: brightness(1.12);">Все связки →</a>
-        </div>
-      </div>
+      <div id="teaserCards" class="bsw-grid-3" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 20px;"></div>
+      <div id="teaserHotdeal"></div>
     </div>
   </div>
 
@@ -188,6 +167,7 @@ a { color: #C4B0FA; }
         <div data-en="Leave a request — in 15 minutes we'll go through your situation, and I'll tell you honestly what you need and what you don't. No hard sell." style="font-size: 17px; line-height: 1.7; color: #9B94AD; font-weight: 500;">Оставьте заявку — за 15 минут разберём вашу ситуацию, и я скажу честно, что вам нужно, а что нет. Без впаривания.</div>
       </div>
       <div id="formCard" style="background: #0C0B12; border: 1px solid rgba(167,139,250,.2); border-radius: 26px; padding: 40px; display: flex; flex-direction: column; gap: 18px;">
+        <div id="cartSummary"></div>
         <input id="fName" maxlength="80" placeholder="Как вас зовут" data-en-placeholder="Your name" style="background: #13111B; border: 1px solid rgba(167,139,250,.16); border-radius: 14px; padding: 16px 18px; font-size: 15px; color: #F2F0F7; font-family: Manrope, sans-serif; font-weight: 600; outline: none;" style-focus="border-color: rgba(167,139,250,.6);">
         <div class="bsw-contact-row" style="display: grid; grid-template-columns: 150px 1fr; gap: 10px;">
           <select id="fWay" style="cursor: pointer; background-color: #13111B; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%23C4B0FA' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E&quot;); background-repeat: no-repeat; background-position: right 14px center; border: 1px solid rgba(167,139,250,.16); border-radius: 14px; padding: 16px 34px 16px 14px; font-size: 15px; color: #F2F0F7; font-family: Manrope, sans-serif; font-weight: 600; outline: none; appearance: none;">
@@ -206,6 +186,7 @@ a { color: #C4B0FA; }
           <option value="Сайт + ИИ" data-en="Website + AI receptionist">Сайт + ИИ-администратор</option>
           <option value="Не знаю" data-en="Not sure yet — help me figure it out">Пока не знаю — разберитесь со мной</option>
         </select>
+        <textarea id="fComment" maxlength="500" rows="2" placeholder="Комментарий (необязательно)" data-en-placeholder="Comment (optional)" style="resize: vertical; background: #13111B; border: 1px solid rgba(167,139,250,.16); border-radius: 14px; padding: 14px 18px; font-size: 15px; color: #F2F0F7; font-family: Manrope, sans-serif; font-weight: 600; outline: none;" style-focus="border-color: rgba(167,139,250,.6);"></textarea>
         <button id="fSubmit" data-en="Get a plan and a price" style="cursor: pointer; border: none; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); color: #0B0714; font-family: Manrope, sans-serif; font-weight: 800; font-size: 16px; padding: 17px; border-radius: 100px;" style-hover="filter: brightness(1.12);">Получить план и цену</button>
         <div data-en="I reply personally, usually within a couple of hours" style="font-size: 12.5px; color: #9B94AD; font-weight: 600; text-align: center;">Отвечаю лично, обычно в течение пары часов</div>
         <div data-en="By clicking the button, you agree to the &lt;a href=&quot;privacy.html&quot; style=&quot;color: #9B94AD;&quot;&gt;privacy policy&lt;/a&gt;" style="font-size: 12px; color: #6E6880; font-weight: 500; text-align: center; line-height: 1.5;">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html" style="color: #9B94AD;" style-hover="color: #C4B0FA;">политикой конфиденциальности</a></div>
@@ -230,6 +211,9 @@ a { color: #C4B0FA; }
           <a href="privacy.html" data-en="Privacy Policy" style="color: #9B94AD; text-decoration: none; font-size: 13.5px; font-weight: 600;" style-hover="color: #F2F0F7;">Политика конфиденциальности</a>
         </div>
         <div style="display: flex; gap: 12px; align-items: center;">
+          <a href="https://t.me/bloomspaceweb" target="_blank" rel="noopener" aria-label="Telegram" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(167,139,250,.25); color: #C4B0FA;" style-hover="border-color: rgba(167,139,250,.7); color: #F2F0F7;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
+          </a>
           <a href="https://www.instagram.com/bloomspaceweb?igsh=MXhvbXh2OG9zN2hxcQ%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(167,139,250,.25); color: #C4B0FA;" style-hover="border-color: rgba(167,139,250,.7); color: #F2F0F7;">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
           </a>
@@ -315,6 +299,41 @@ fWay.addEventListener('change', function(){
   fContact.placeholder = PLACEHOLDERS[lang][fWay.value];
   privacyHint.style.display = (fWay.value === 'Instagram' || fWay.value === 'Telegram') ? 'block' : 'none';
 });
+
+// корзина в форме заявки
+var geoState = { country: '', currency: 'BYN', rates: null };
+function bynTextForm(n) { return Math.round(n).toLocaleString('ru-RU') + ' BYN'; }
+
+function renderCartSummary() {
+  var host = document.getElementById('cartSummary');
+  if (!host || !window.BSW_CART) return;
+  var lang = document.documentElement.lang === 'en' ? 'en' : 'ru';
+  var lines = window.BSW_CART.getLines(geoState.currency, geoState.rates);
+  if (lines.length === 0) {
+    host.innerHTML = '<div style="font-size:13px;color:#9B94AD;font-weight:600;background:#13111B;border:1px solid rgba(167,139,250,.14);border-radius:12px;padding:12px 14px;">' +
+      (lang === 'ru' ? 'Не выбрали услуги? Оставьте контакт — поможем определиться' : 'Not sure what you need? Leave your contact and we\'ll help you figure it out') +
+    '</div>';
+    return;
+  }
+  var totals = window.BSW_CART.getTotals(geoState.currency, geoState.rates);
+  var rows = lines.map(function (l) {
+    var p = l.onceText || (l.monthlyText ? l.monthlyText + (lang === 'ru' ? '/мес' : '/mo') : '');
+    return '<div style="display:flex;justify-content:space-between;gap:10px;font-size:13.5px;"><span style="color:#D8D3E6;">' + l.title[lang] + '</span><span style="color:#C4B0FA;font-weight:700;white-space:nowrap;">' + p + '</span></div>';
+  }).join('');
+  var totalsHtml = '<div style="display:flex;flex-direction:column;gap:2px;padding-top:8px;margin-top:4px;border-top:1px solid rgba(167,139,250,.12);font-size:13.5px;font-weight:800;">' +
+    (totals.onceText ? '<div style="display:flex;justify-content:space-between;"><span>' + (lang === 'ru' ? 'Итого' : 'Total') + '</span><span>' + totals.onceText + '</span></div>' : '') +
+    (totals.monthlyText ? '<div style="display:flex;justify-content:space-between;color:#9B94AD;font-weight:700;"><span>' + (lang === 'ru' ? 'В месяц' : 'Per month') + '</span><span>' + totals.monthlyText + '</span></div>' : '') +
+  '</div>';
+  host.innerHTML = '<div style="display:flex;flex-direction:column;gap:6px;background:#13111B;border:1px solid rgba(167,139,250,.16);border-radius:14px;padding:14px 16px;margin-bottom:2px;">' + rows + totalsHtml + '</div>';
+}
+renderCartSummary();
+if (window.BSW) {
+  window.BSW.onReady(function (currency, rates, country) {
+    geoState.currency = currency; geoState.rates = rates; geoState.country = country;
+    renderCartSummary();
+  });
+}
+
 document.getElementById('fSubmit').addEventListener('click', function(){
   var name = document.getElementById('fName').value.trim();
   var contact = fContact.value.trim();
@@ -323,16 +342,111 @@ document.getElementById('fSubmit').addEventListener('click', function(){
     return;
   }
   if (document.getElementById('fCompany').value) return; // honeypot: бот заполнил скрытое поле
+
+  var lang = document.documentElement.lang === 'en' ? 'en' : 'ru';
+  var region = lang === 'en' ? 'EN' : 'CIS';
+  var comment = document.getElementById('fComment').value.trim();
+  var lines = window.BSW_CART ? window.BSW_CART.getLines(geoState.currency, geoState.rates) : [];
+  var totals = window.BSW_CART ? window.BSW_CART.getTotals(geoState.currency, geoState.rates) : {};
+  var cartText, cartOnce = null, cartMonthly = null;
+  if (lines.length === 0) {
+    cartText = region === 'CIS' ? 'Пустая корзина — помочь определиться' : 'Empty cart — needs consultation';
+  } else {
+    cartText = lines.map(function (l) {
+      var p = l.onceText || '';
+      if (l.monthlyText) p += (p ? ' + ' : '') + l.monthlyText + (lang === 'ru' ? '/мес' : '/mo');
+      return l.title[lang] + ' — ' + p;
+    }).join('; ');
+    cartOnce = totals.onceRaw || null;
+    cartMonthly = totals.monthlyRaw || null;
+  }
+
   fetch('https://script.google.com/macros/s/AKfycbxJMpZFgELLIcyQJxKMngSPdKDfpS2mkFydNG5FGr6knbIYxQGFYql4gCzOr5xPYaCSZg/exec', {
     method: 'POST',
     mode: 'no-cors',
     headers: { 'Content-Type': 'text/plain' },
-    body: JSON.stringify({ name: name, contact: fWay.value + ': ' + contact, need: document.getElementById('fNeed').value, lang: document.documentElement.lang === 'en' ? 'ENG' : 'RU' })
+    body: JSON.stringify({
+      name: name,
+      contact: fWay.value + ': ' + contact,
+      need: document.getElementById('fNeed').value,
+      comment: comment,
+      country: geoState.country || '',
+      region: region,
+      currency: geoState.currency,
+      cart: cartText,
+      cartOnce: cartOnce,
+      cartMonthly: cartMonthly,
+      lang: region === 'EN' ? 'ENG' : 'RU'
+    })
   }).catch(function(){});
   document.getElementById('formCard').style.display = 'none';
   var sc = document.getElementById('sentCard');
   sc.style.display = 'flex';
 });
+</script>
+
+<script>
+// тизер цен на главной — те же данные, что и на странице «Цены»
+(function () {
+  var TEASER_IDS = ['chat', 'landing', 'multipage'];
+  var state = { lang: 'ru', currency: 'BYN', rates: null };
+
+  function bynText(n) { return Math.round(n).toLocaleString('ru-RU') + ' BYN'; }
+  function priceText(byn, usd, currency, rates) {
+    if (currency === 'USD') return usd != null ? '$' + Math.round(usd).toLocaleString('en-US') : null;
+    if (!currency || currency === 'BYN') return byn != null ? bynText(byn) : null;
+    if (byn == null || !window.BSW) return null;
+    return window.BSW.formatByn(byn, currency, rates);
+  }
+
+  function tileHTML(card) {
+    var lang = state.lang, currency = state.currency, rates = state.rates;
+    var once = priceText(card.byn, card.usd, currency, rates);
+    var mo = (card.bynMonthly != null || card.usdMonthly != null) ? priceText(card.bynMonthly, card.usdMonthly, currency, rates) : null;
+    var moHtml = mo ? '<div style="font-size:12.5px;color:#9B94AD;font-weight:600;">+ ' + mo + (lang === 'ru' ? '/мес' : '/mo') + '</div>' : '';
+    return '<div style="background:#0C0B12;border:1px solid rgba(167,139,250,.14);border-radius:20px;padding:24px 22px;display:flex;flex-direction:column;gap:6px;">' +
+      '<div style="font-weight:800;font-size:14px;color:#9B94AD;">' + card.title[lang] + '</div>' +
+      '<div style="font-family:Unbounded,sans-serif;font-weight:700;font-size:26px;">' + (once || '') + '</div>' +
+      moHtml +
+    '</div>';
+  }
+
+  function hotdealHTML(card) {
+    var lang = state.lang, currency = state.currency, rates = state.rates;
+    var once = priceText(card.byn, card.usd, currency, rates);
+    return '<div class="bsw-hotdeal" style="background:linear-gradient(160deg, rgba(167,139,250,.16), rgba(124,92,252,.06));border:1px solid rgba(167,139,250,.4);border-radius:24px;padding:30px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;position:relative;">' +
+      '<div class="bsw-hotdeal-badge" style="position:absolute;top:-12px;left:32px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#0B0714;background:linear-gradient(135deg,#C4B0FA,#8B6CF7);padding:6px 14px;border-radius:100px;">' + card.badge[lang] + '</div>' +
+      '<div>' +
+        '<div style="font-weight:800;font-size:16px;color:#C4B0FA;margin-bottom:6px;">' + card.title[lang] + '</div>' +
+        '<div style="font-size:14px;color:#9B94AD;font-weight:600;">' + card.desc[lang] + '</div>' +
+      '</div>' +
+      '<div style="display:flex;align-items:baseline;gap:20px;">' +
+        '<div style="font-family:Unbounded,sans-serif;font-weight:700;font-size:30px;">' + (once || '') + '</div>' +
+        '<a href="ceny.html" style="text-decoration:none;color:#0B0714;background:linear-gradient(135deg,#C4B0FA,#8B6CF7);font-weight:800;font-size:14px;padding:12px 24px;border-radius:100px;white-space:nowrap;">' + (lang === 'ru' ? 'Все тарифы →' : 'All plans →') + '</a>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function render() {
+    var cardsEl = document.getElementById('teaserCards');
+    var hotdealEl = document.getElementById('teaserHotdeal');
+    if (!cardsEl || !hotdealEl || !window.BSW_PRICING) return;
+    var byId = {};
+    window.BSW_PRICING.cards.forEach(function (c) { byId[c.id] = c; });
+    cardsEl.innerHTML = TEASER_IDS.map(function (id) { return tileHTML(byId[id]); }).join('');
+    hotdealEl.innerHTML = hotdealHTML(byId.bundle);
+  }
+
+  render();
+  if (window.BSW) {
+    window.BSW.onReady(function (currency, rates) {
+      state.lang = document.documentElement.lang === 'en' ? 'en' : 'ru';
+      state.currency = currency;
+      state.rates = rates;
+      render();
+    });
+  }
+})();
 </script>
 </body>
 </html>
