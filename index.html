@@ -17,6 +17,18 @@ body { margin: 0; background: #050506; }
 ::selection { background: rgba(167,139,250,.35); }
 #form { scroll-margin-top: 90px; }
 a { color: #C4B0FA; }
+
+/* живой ИИ-чат (демо) */
+.ai-chat-msg { max-width: 84%; padding: 12px 16px; border-radius: 18px 18px 18px 6px; font-size: 14px; line-height: 1.55; color: #F0EDF8; background: #17151F; border: 1px solid rgba(167,139,250,.06); align-self: flex-start; white-space: pre-wrap; }
+.ai-chat-msg-user { align-self: flex-end; border-radius: 18px 18px 6px 18px; background: linear-gradient(135deg, rgba(167,139,250,.28), rgba(124,92,252,.22)); border: 1px solid rgba(167,139,250,.25); }
+.ai-chat-chip { cursor: pointer; text-align: left; border: 1px solid rgba(167,139,250,.3); background: transparent; color: #C4B0FA; font-family: Manrope, sans-serif; font-weight: 600; font-size: 12.5px; padding: 8px 14px; border-radius: 100px; }
+.ai-chat-chip:hover { border-color: rgba(167,139,250,.7); color: #F2F0F7; }
+.ai-chat-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+.ai-chat-action-primary, .ai-chat-action-secondary { text-decoration: none; font-weight: 800; font-size: 13.5px; padding: 11px 20px; border-radius: 100px; text-align: center; }
+.ai-chat-action-primary { color: #0B0714; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); }
+.ai-chat-action-secondary { color: #F2F0F7; border: 1px solid rgba(167,139,250,.3); }
+#aiChatMessages::-webkit-scrollbar { width: 6px; }
+#aiChatMessages::-webkit-scrollbar-thumb { background: rgba(167,139,250,.25); border-radius: 10px; }
 </style>
 <link rel="stylesheet" href="assets/mobile.css">
 </head>
@@ -99,12 +111,18 @@ a { color: #C4B0FA; }
     <div class="bsw-section" style="max-width: 1240px; margin: 0 auto; padding: 110px 40px;">
       <div style="text-align: center; margin-bottom: 56px;">
         <div data-en="Live demo" style="font-size: 13px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: #A78BFA; margin-bottom: 16px;">Живое демо</div>
-        <div data-en="This is what your clients&lt;br&gt;actually see" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 48px); line-height: 1.15;">Вот как это выглядит<br>у ваших клиентов</div>
+        <div data-en="Talk to the AI that runs this page" style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 48px); line-height: 1.15;">Поговорите с ИИ, который ведёт этот сайт</div>
       </div>
       <div style="display: flex; justify-content: center;">
-        <div style="width: 100%; max-width: 560px; background: #0C0B12; border: 1px solid rgba(167,139,250,.16); border-radius: 26px; padding: 32px; display: flex; flex-direction: column; gap: 18px; min-height: 480px;">
-          <div id="chatBox" style="display: flex; flex-direction: column; gap: 12px;"></div>
-          <div data-en="This isn't a button-driven script. The AI understands natural language and your actual services." style="margin-top: auto; font-size: 13px; font-weight: 700; color: #9B94AD; text-align: center; padding-top: 12px; border-top: 1px solid rgba(167,139,250,.1);">Это не скрипт с кнопками. ИИ понимает живой язык и ваши услуги.</div>
+        <div style="width: 100%; max-width: 560px; background: #0C0B12; border: 1px solid rgba(167,139,250,.16); border-radius: 26px; padding: 22px; display: flex; flex-direction: column; gap: 12px; min-height: 480px;">
+          <div id="aiChatMessages" style="display: flex; flex-direction: column; gap: 12px; flex: 1; overflow-y: auto; max-height: 420px;"></div>
+          <div id="aiChatTyping" hidden data-en="Typing…" style="font-size: 13px; color: #9B94AD; font-weight: 600;">Печатает…</div>
+          <div id="aiChatChips" style="display: flex; flex-wrap: wrap; gap: 8px;"></div>
+          <div id="aiChatRemaining" style="font-size: 12px; color: #6E6880; font-weight: 600; text-align: center;"></div>
+          <form id="aiChatForm" style="display: flex; gap: 8px;">
+            <input id="aiChatInput" maxlength="1000" autocomplete="off" placeholder="Напишите сообщение…" data-en-placeholder="Type a message…" style="flex: 1; min-width: 0; background: #13111B; border: 1px solid rgba(167,139,250,.16); border-radius: 14px; padding: 14px 16px; font-size: 14px; color: #F2F0F7; font-family: Manrope, sans-serif; font-weight: 600; outline: none;" style-focus="border-color: rgba(167,139,250,.6);">
+            <button type="submit" id="aiChatSend" aria-label="Send" style="cursor: pointer; flex: none; border: none; background: linear-gradient(135deg, #C4B0FA, #8B6CF7); color: #0B0714; font-weight: 800; font-size: 15px; padding: 0 20px; border-radius: 14px;" style-hover="filter: brightness(1.12);">→</button>
+          </form>
         </div>
       </div>
     </div>
@@ -252,40 +270,6 @@ var heroV = document.getElementById('heroVideo');
 setInterval(function(){
   if (document.visibilityState === 'visible' && heroV.paused) { heroV.muted = true; heroV.play().catch(function(){}); }
 }, 1500);
-
-// чат-демо
-var CHAT = [
-  { me: false, text: 'Добрый вечер! А завтра есть свободное время на стрижку?', textEn: 'Good evening! Do you have any time free tomorrow for a haircut?' },
-  { me: true, text: 'Добрый вечер! Завтра свободно 12:30 и 18:00. Стрижка — <span data-usd="50">$50</span>. Какое время удобнее?', textEn: 'Good evening! Tomorrow 12:30 and 18:00 are free. A haircut is <span data-usd="50">$50</span>. Which time works better?' },
-  { me: false, text: 'В 18:00, после работы', textEn: '18:00, after work' },
-  { me: true, text: 'Записала вас на 18:00 к мастеру Ане. Адрес: пр. Победителей 65. До встречи!', textEn: "Booked you for 18:00 with stylist Anna. Address: 65 Pobediteley Ave. See you then!" }
-];
-var chatBox = document.getElementById('chatBox');
-CHAT.forEach(function(m){
-  var row = document.createElement('div');
-  row.style.cssText = 'display:flex;justify-content:' + (m.me ? 'flex-end' : 'flex-start') + ';opacity:0;transform:translateY(14px);transition:opacity .25s,transform .25s;';
-  var bubble = document.createElement('div');
-  bubble.style.cssText = 'max-width:78%;background:' + (m.me ? 'linear-gradient(135deg, rgba(167,139,250,.28), rgba(124,92,252,.22))' : '#17151F') + ';border:1px solid ' + (m.me ? 'rgba(167,139,250,.25)' : 'rgba(167,139,250,.06)') + ';border-radius:' + (m.me ? '18px 18px 6px 18px' : '18px 18px 18px 6px') + ';padding:12px 16px;font-size:14px;line-height:1.55;color:#F0EDF8;';
-  bubble.innerHTML = m.text;
-  bubble.setAttribute('data-en', m.textEn);
-  row.appendChild(bubble);
-  chatBox.appendChild(row);
-});
-var demoN = 0, demoTimer = null;
-function demoTick(){
-  demoN = (demoN + 1) % 9;
-  var shown = Math.min(CHAT.length, Math.max(0, demoN));
-  Array.prototype.forEach.call(chatBox.children, function(row, i){
-    row.style.opacity = i < shown ? 1 : 0;
-    row.style.transform = i < shown ? 'translateY(0)' : 'translateY(14px)';
-  });
-}
-new IntersectionObserver(function(entries){
-  entries.forEach(function(e){
-    if (e.isIntersecting && !demoTimer) demoTimer = setInterval(demoTick, 700);
-    else if (!e.isIntersecting && demoTimer) { clearInterval(demoTimer); demoTimer = null; }
-  });
-}, { threshold: 0.25 }).observe(document.getElementById('demoSection'));
 
 // форма
 var fWay = document.getElementById('fWay');
@@ -455,5 +439,8 @@ document.getElementById('fSubmit').addEventListener('click', function(){
   }
 })();
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@4/dist/fp.min.js"></script>
+<script src="assets/chat-client.js"></script>
 </body>
 </html>
